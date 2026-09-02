@@ -1,0 +1,33 @@
+---
+layout: base.njk
+---
+<article class="workshop-page">
+  <section class="workshop-hero">
+    <div>
+      <p class="eyebrow">{{ eyebrow }}</p>
+      <h1>{{ title }}</h1>
+      <p class="lead">{{ summary }}</p>
+      <div class="facts">
+        {% if duration %}<span>{{ duration }}</span>{% endif %}
+        {% if price %}<span>{{ price }}</span>{% endif %}
+        {% if status %}<span>{{ status }}</span>{% endif %}
+      </div>
+      {% if whatsapp %}
+      <a class="button" href="{{ whatsapp }}" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+      {% endif %}
+    </div>
+    <div class="hero-art">
+      {% if cover %}
+        <img src="{{ cover }}" alt="">
+      {% else %}
+        <span>Здесь будет ваша фотография</span>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="workshop-content">
+    <div class="prose">
+      {{ content | safe }}
+    </div>
+  </section>
+</article>

@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: Авторские художественные мастер-классы
+---
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">ХУДОЖЕСТВЕННЫЕ МАСТЕРСКИЕ В РИГЕ</p>
+    <h1>Искусство как диалог</h1>
+    <p class="lead">Камерные встречи, где история искусства, внимательный взгляд и личная творческая практика соединяются в единый опыт.</p>
+    <a class="button" href="#workshops">Выбрать мастер-класс</a>
+  </div>
+  <div class="hero-art" aria-label="Место для авторской фотографии">
+    <span>Здесь будет ваша фотография</span>
+  </div>
+</section>
+
+<section class="statement" id="about">
+  <p>Каждая мастерская — не просто урок живописи, а встреча с художественной идеей, эпохой и собственным взглядом.</p>
+</section>
+
+<section class="catalogue" id="workshops">
+  <div class="section-heading">
+    <p class="eyebrow">АВТОРСКИЕ МАСТЕР-КЛАССЫ</p>
+    <h2>Выберите свой диалог</h2>
+  </div>
+
+  <div class="cards">
+  {% for workshop in collections.workshops | sort(false, false, "data.order") %}
+    <article class="card">
+      <a class="card-image" href="{{ workshop.url }}">
+        {% if workshop.data.cover %}
+          <img src="{{ workshop.data.cover }}" alt="">
+        {% else %}
+          <span>Фото мастер-класса</span>
+        {% endif %}
+      </a>
+      <div class="card-body">
+        <p class="meta">{{ workshop.data.duration }}{% if workshop.data.price %} · {{ workshop.data.price }}{% endif %}</p>
+        <h3><a href="{{ workshop.url }}">{{ workshop.data.title }}</a></h3>
+        <p>{{ workshop.data.summary }}</p>
+        <p class="status">{{ workshop.data.status }}</p>
+        <a class="text-link" href="{{ workshop.url }}">Подробнее →</a>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,56 @@
+media:
+  input: src/assets
+  output: /assets
+
+content:
+  - name: workshops
+    label: Мастер-классы
+    type: collection
+    path: src/workshops
+    filename: "{fields.slug}.md"
+    view:
+      fields: [title, status, price]
+      primary: title
+      sort: [title]
+      default:
+        search: ""
+    fields:
+      - name: title
+        label: Название
+        type: string
+        required: true
+      - name: slug
+        label: Адрес страницы
+        type: string
+        required: true
+        description: "Латиницей, без пробелов: например impressionists"
+      - name: eyebrow
+        label: Короткая строка над заголовком
+        type: string
+      - name: summary
+        label: Краткое описание
+        type: text
+        required: true
+      - name: duration
+        label: Продолжительность
+        type: string
+      - name: price
+        label: Стоимость
+        type: string
+      - name: status
+        label: Дата / статус
+        type: string
+      - name: cover
+        label: Обложка
+        type: image
+      - name: whatsapp
+        label: WhatsApp-ссылка
+        type: string
+      - name: order
+        label: Порядок в каталоге
+        type: number
+        default: 10
+      - name: body
+        label: О мастер-классе
+        type: rich-text
+        required: true
