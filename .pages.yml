@@ -10,7 +10,7 @@ content:
     filename: "{fields.slug}.md"
     view:
       primary: title
-      fields: [status, price]
+      fields: [title, status, price]
       sort: order
       order: asc
     fields:
