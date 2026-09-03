@@ -9,48 +9,109 @@ content:
     path: src/workshops
     filename: "{fields.slug}.md"
     view:
-      fields: [title, status, price]
       primary: title
-      sort: [title]
-      default:
-        search: ""
+      fields: [status, price]
+      sort: order
+      order: asc
     fields:
       - name: title
         label: Название
         type: string
         required: true
+
       - name: slug
         label: Адрес страницы
         type: string
         required: true
-        description: "Латиницей, без пробелов: например impressionists"
+        pattern:
+          regex: "^[a-z0-9-]+$"
+          message: "Используйте только латинские буквы, цифры и дефисы, без пробелов."
+        description: "Технический адрес страницы. После публикации лучше не менять."
+
       - name: eyebrow
         label: Короткая строка над заголовком
         type: string
+        description: "Например: ЖИВОПИСЬ · ИСТОРИЯ ИСКУССТВА · ЛИЧНЫЙ ОПЫТ"
+
       - name: summary
         label: Краткое описание
         type: text
         required: true
+        description: "1–2 предложения для карточки каталога и первого экрана."
+
       - name: duration
         label: Продолжительность
         type: string
+        description: "Например: 3 часа"
+
       - name: price
         label: Стоимость
         type: string
+        description: "Например: 45 €"
+
       - name: status
         label: Дата / статус
         type: string
-      - name: cover
-        label: Обложка
-        type: image
-      - name: whatsapp
-        label: WhatsApp-ссылка
+        description: "Например: 18 октября · 16:00 или Ближайшая дата уточняется"
+
+      - name: location
+        label: Место проведения
         type: string
-      - name: order
-        label: Порядок в каталоге
-        type: number
-        default: 10
+        description: "Можно оставить пустым, если место ещё не определено."
+
+      - name: cover
+        label: Главная фотография
+        type: image
+        options:
+          extensions: [jpg, jpeg, png, webp]
+          rename: true
+
       - name: body
         label: О мастер-классе
         type: rich-text
         required: true
+        options:
+          format: markdown
+          switcher: false
+          media: false
+
+      - name: program
+        label: Как проходит встреча
+        type: rich-text
+        options:
+          format: markdown
+          switcher: false
+          media: false
+
+      - name: takeaway
+        label: Что вы унесёте с собой
+        type: rich-text
+        options:
+          format: markdown
+          switcher: false
+          media: false
+
+      - name: gallery
+        label: Галерея
+        type: image
+        options:
+          multiple:
+            max: 10
+          unique: true
+          extensions: [jpg, jpeg, png, webp]
+          rename: true
+
+      - name: video
+        label: Видео / Reel
+        type: string
+        description: "Ссылка на видео. Можно оставить пустой."
+
+      - name: whatsapp
+        label: WhatsApp-ссылка
+        type: string
+        description: "Полная ссылка wa.me с вашим номером и, при желании, готовым текстом сообщения."
+
+      - name: order
+        label: Порядок в каталоге
+        type: number
+        description: "1 — первая карточка, 2 — вторая и т. д."
