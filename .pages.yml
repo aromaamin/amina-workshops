@@ -102,9 +102,12 @@ content:
           rename: true
 
       - name: video
-        label: Видео / Reel
-        type: string
-        description: "Ссылка на видео. Можно оставить пустой."
+  label: Видео мастер-класса
+  type: file
+  description: Загрузите видео в формате MP4. Можно оставить пустым.
+  options:
+    extensions:
+      - mp4
 
       - name: whatsapp
         label: WhatsApp-ссылка
