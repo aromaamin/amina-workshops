@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
 :root {
   --bg: #f4f0e9;
   --paper: #fbf9f5;
@@ -54,7 +55,7 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 
 .special-title-main {
   display: block;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(64px, 7vw, 104px);
   line-height: .92;
 }
@@ -62,9 +63,10 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .special-title-accent {
   display: block;
   margin-top: 6px;
-  font-family: "Arial Narrow", "Aptos Narrow", Arial, sans-serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(48px, 5.6vw, 82px);
   font-weight: 400;
+  font-style: italic;
   line-height: .95;
   letter-spacing: -0.035em;
   white-space: nowrap;
