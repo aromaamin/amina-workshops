@@ -85,3 +85,61 @@ title: Авторские художественные мастер-классы
   {% endfor %}
   </div>
 </section>
+<script>
+  const slider = document.querySelector('.cards');
+
+  if (slider) {
+    let isDown = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    let hasDragged = false;
+
+    slider.addEventListener('pointerdown', (e) => {
+      if (e.pointerType !== 'mouse') return;
+
+      isDown = true;
+      hasDragged = false;
+      startX = e.clientX;
+      startScrollLeft = slider.scrollLeft;
+
+      slider.classList.add('is-dragging');
+      slider.setPointerCapture(e.pointerId);
+    });
+
+    slider.addEventListener('pointermove', (e) => {
+      if (!isDown) return;
+
+      const distance = e.clientX - startX;
+
+      if (Math.abs(distance) > 4) {
+        hasDragged = true;
+      }
+
+      slider.scrollLeft = startScrollLeft - distance;
+    });
+
+    slider.addEventListener('pointerup', (e) => {
+      if (!isDown) return;
+
+      isDown = false;
+      slider.classList.remove('is-dragging');
+
+      if (slider.hasPointerCapture(e.pointerId)) {
+        slider.releasePointerCapture(e.pointerId);
+      }
+    });
+
+    slider.addEventListener('pointercancel', () => {
+      isDown = false;
+      slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('click', (e) => {
+      if (hasDragged) {
+        e.preventDefault();
+        e.stopPropagation();
+        hasDragged = false;
+      }
+    }, true);
+  }
+</script>
