@@ -104,6 +104,7 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
   position: relative;
   width: 100%;
   max-width: 570px;
+  margin-left: 70px;
 }
 
 .home-hero .hero-copy-content {
