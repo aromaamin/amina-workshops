@@ -411,13 +411,30 @@ h3 a { text-decoration:none; }
   letter-spacing: .18em;
 }
 .cards {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
   gap: 24px;
+
+  margin-left: 126px;
+  width: calc(100% - 126px);
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 12px;
+
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
 }
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
 .card {
-  background:var(--paper);
-  border:1px solid var(--line);
+  flex: 0 0 clamp(330px, 22vw, 410px);
+  scroll-snap-align: start;
+  background: var(--paper);
+  border: 1px solid var(--line);
 }
 .card-image { aspect-ratio: 4 / 3; text-decoration:none; }
 .card-body { padding:30px; }
