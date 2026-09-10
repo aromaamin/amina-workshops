@@ -94,22 +94,26 @@ title: Авторские художественные мастер-классы
     let startScrollLeft = 0;
     let hasDragged = false;
 
-    slider.addEventListener('pointerdown', (e) => {
-      if (e.pointerType !== 'mouse') return;
+    slider.addEventListener('dragstart', (e) => {
+      e.preventDefault();
+    });
 
+    slider.addEventListener('mousedown', (e) => {
       isDown = true;
       hasDragged = false;
-      startX = e.clientX;
+
+      startX = e.pageX;
       startScrollLeft = slider.scrollLeft;
 
       slider.classList.add('is-dragging');
-      slider.setPointerCapture(e.pointerId);
     });
 
-    slider.addEventListener('pointermove', (e) => {
+    window.addEventListener('mousemove', (e) => {
       if (!isDown) return;
 
-      const distance = e.clientX - startX;
+      e.preventDefault();
+
+      const distance = e.pageX - startX;
 
       if (Math.abs(distance) > 4) {
         hasDragged = true;
@@ -118,18 +122,9 @@ title: Авторские художественные мастер-классы
       slider.scrollLeft = startScrollLeft - distance;
     });
 
-    slider.addEventListener('pointerup', (e) => {
+    window.addEventListener('mouseup', () => {
       if (!isDown) return;
 
-      isDown = false;
-      slider.classList.remove('is-dragging');
-
-      if (slider.hasPointerCapture(e.pointerId)) {
-        slider.releasePointerCapture(e.pointerId);
-      }
-    });
-
-    slider.addEventListener('pointercancel', () => {
       isDown = false;
       slider.classList.remove('is-dragging');
     });
