@@ -301,22 +301,24 @@ h3 a { text-decoration:none; }
 }
 
 .statement-text {
-  max-width: 1120px;
+  max-width: 1240px;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(40px, 3.8vw, 66px);
-  line-height: 1.08;
-  letter-spacing: -0.025em;
+  font-size: clamp(38px, 3.35vw, 58px);
+  line-height: 1.11;
+  letter-spacing: -0.018em;
+  font-weight: 400;
 }
 
 .statement-text em {
   display: inline-block;
-  margin-top: 6px;
+  margin-top: 10px;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: 1.06em;
+  font-size: 1.08em;
+  line-height: 1.02;
   font-weight: 400;
   font-style: italic;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.025em;
 }
 
 .statement-notes {
