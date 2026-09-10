@@ -103,12 +103,12 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .home-hero .hero-copy > * {
   width: 100%;
   max-width: 570px;
-  margin-left: auto;
+  margin-left: 0;
 }
 
 .home-hero .eyebrow {
   margin-bottom: 32px;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: .18em;
 }
 
@@ -148,14 +148,16 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 }
 
 .home-hero .button {
-  width: auto;
-  padding: 16px 24px;
-  background: #2b2926;
-  color: var(--paper);
-  border-color: #2b2926;
-  border-radius: 2px;
+  width: 100%;
+  max-width: 570px;
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, .22);
+  color: #2b2926;
+  border: 1px solid rgba(43, 41, 38, .22);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(43, 41, 38, .06);
+  backdrop-filter: blur(6px);
 }
-
 .home-hero-art {
   position: relative;
   min-width: 0;
@@ -201,9 +203,10 @@ h3 a { text-decoration:none; }
   color:var(--muted); text-align:center;
 }
 .statement {
-  max-width: 1440px;
+  width: min(2000px, calc(100% - 48px));
+  max-width: none;
   margin: 0 auto;
-  padding: 90px 28px;
+  padding: 90px 0;
   border-bottom: 1px solid var(--line);
 }
 .statement p {
