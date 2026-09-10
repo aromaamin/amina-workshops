@@ -202,7 +202,7 @@ h3 a { text-decoration:none; }
   line-height:1.18;
   }
  .catalogue {
-  width: min(1700px, calc(100% - 64px));
+  width: min(2000px, calc(100% - 48px));
   max-width: none;
   margin: 0 auto;
   padding: 90px 0 110px;
