@@ -376,7 +376,35 @@ h3 a { text-decoration:none; }
   margin: 0 auto;
   padding: 90px 0 110px;
 }
-.section-heading { max-width:800px; }
+.catalogue-heading-layout {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+.catalogue-marker {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 400;
+  color: #8b8174;
+  padding-top: 8px;
+  position: relative;
+}
+
+.catalogue-marker::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  top: 48px;
+  width: 1px;
+  height: 150px;
+  background: rgba(43, 41, 38, .18);
+}
+.section-heading {
+  max-width: 900px;
+}
 .section-heading .eyebrow {
   font-size: 14px;
   letter-spacing: .18em;
