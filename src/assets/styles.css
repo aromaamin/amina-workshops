@@ -27,7 +27,16 @@ img { display:block; width:100%; height:100%; object-fit:cover; }
 .brand { text-decoration:none; font-weight:600; letter-spacing:.02em; }
 nav { display:flex; gap:24px; }
 nav a { text-decoration:none; font-size:14px; }
-main, .site-footer { max-width:1440px; margin:0 auto; }
+main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.site-footer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
 .hero, .workshop-hero {
   display:grid;
   grid-template-columns: 1.05fr .95fr;
