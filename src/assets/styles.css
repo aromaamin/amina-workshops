@@ -84,12 +84,11 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 
 .home-hero {
   grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-  min-height: 0;
-  height: 570px;
+  min-height: 680px;
+  height: min(780px, 78vh);
   background: var(--bg);
   overflow: hidden;
 }
-
 .home-hero .hero-copy {
   position: relative;
   z-index: 2;
