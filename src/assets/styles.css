@@ -100,10 +100,36 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
   z-index: 2;
   padding: 88px 18px 72px 70px;
 }
-.home-hero .hero-copy > * {
+.home-hero .hero-copy-layout {
+  position: relative;
   width: 100%;
   max-width: 570px;
-  margin-left: 0;
+}
+
+.home-hero .hero-copy-content {
+  width: 100%;
+}
+
+.hero-marker {
+  position: absolute;
+  left: -58px;
+  top: 1px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 400;
+  color: #8b8174;
+}
+
+.hero-marker::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 34px;
+  width: 1px;
+  height: 155px;
+  background: rgba(43, 41, 38, .18);
 }
 
 .home-hero .eyebrow {
