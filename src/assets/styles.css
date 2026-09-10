@@ -83,10 +83,11 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 /* HOME HERO */
 
 .home-hero {
-  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
-  min-height: 640px;
-  height: min(720px, 72vh);
-  max-width: 1600px;
+  grid-template-columns: minmax(0, .76fr) minmax(0, 1.24fr);
+  width: min(2000px, calc(100% - 48px));
+  max-width: none;
+  min-height: 700px;
+  height: min(820px, 80vh);
   margin: 0 auto;
   background: var(--bg);
   overflow: hidden;
@@ -94,7 +95,12 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .home-hero .hero-copy {
   position: relative;
   z-index: 2;
-  padding: 88px 22px 72px 28px;
+  padding: 88px 18px 72px 70px;
+}
+.home-hero .hero-copy > * {
+  width: 100%;
+  max-width: 570px;
+  margin-left: auto;
 }
 
 .home-hero .eyebrow {
