@@ -431,7 +431,7 @@ h3 a { text-decoration:none; }
 }
 
 .card {
-  flex: 0 0 clamp(330px, 22vw, 410px);
+  flex: 0 0 clamp(350px, 24vw, 440px);
   scroll-snap-align: start;
   background: var(--paper);
   border: 1px solid var(--line);
