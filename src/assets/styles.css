@@ -427,14 +427,14 @@ h3 a { text-decoration:none; }
   -webkit-mask-image: linear-gradient(
   to right,
   #000 0%,
-  #000 calc(100% - 110px),
+  #000 calc(100% - 70px),
   transparent 100%
 );
 
 mask-image: linear-gradient(
   to right,
   #000 0%,
-  #000 calc(100% - 110px),
+  #000 calc(100% - 70px),
   transparent 100%
 );
 }
