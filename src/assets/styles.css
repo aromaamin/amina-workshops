@@ -424,6 +424,10 @@ h3 a { text-decoration:none; }
 
   scroll-snap-type: x proximity;
   scrollbar-width: none;
+  cursor: grab;
+user-select: none;
+-webkit-user-select: none;
+scroll-behavior: smooth;
   -webkit-mask-image: linear-gradient(
   to right,
   #000 0%,
@@ -438,7 +442,11 @@ mask-image: linear-gradient(
   transparent 100%
 );
 }
-
+.cards.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
 .cards::-webkit-scrollbar {
   display: none;
 }
