@@ -415,7 +415,7 @@ h3 a { text-decoration:none; }
   gap: 24px;
 
   margin-left: 126px;
-  width: calc(100% - 126px);
+  width: calc(100% - 250px);
 
   overflow-x: auto;
   overflow-y: hidden;
@@ -424,6 +424,19 @@ h3 a { text-decoration:none; }
 
   scroll-snap-type: x proximity;
   scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(
+  to right,
+  #000 0%,
+  #000 calc(100% - 110px),
+  transparent 100%
+);
+
+mask-image: linear-gradient(
+  to right,
+  #000 0%,
+  #000 calc(100% - 110px),
+  transparent 100%
+);
 }
 
 .cards::-webkit-scrollbar {
