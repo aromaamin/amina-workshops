@@ -222,6 +222,10 @@ h3 a { text-decoration:none; }
   padding: 90px 0 110px;
 }
 .section-heading { max-width:800px; }
+.section-heading .eyebrow {
+  font-size: 14px;
+  letter-spacing: .18em;
+}
 .cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
