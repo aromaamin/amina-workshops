@@ -150,13 +150,46 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .home-hero .button {
   width: 100%;
   max-width: 570px;
-  padding: 16px 22px;
-  background: rgba(255, 255, 255, .22);
+  padding: 17px 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.52) 0%,
+    rgba(255,255,255,.20) 100%
+  );
   color: #2b2926;
-  border: 1px solid rgba(43, 41, 38, .22);
-  border-radius: 12px;
-  box-shadow: 0 8px 24px rgba(43, 41, 38, .06);
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 14px;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.80),
+    0 10px 30px rgba(43,41,38,.10);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+.home-hero .button::after {
+  content: "→";
+  float: right;
+  font-size: 16px;
+  transition: transform .35s ease;
+}
+
+.home-hero .button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.72) 0%,
+    rgba(255,255,255,.30) 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.95),
+    0 16px 38px rgba(43,41,38,.14);
+}
+
+.home-hero .button:hover::after {
+  transform: translateX(5px);
 }
 .home-hero-art {
   position: relative;
