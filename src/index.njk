@@ -55,10 +55,14 @@ title: Авторские художественные мастер-классы
 </section>
 
 <section class="catalogue" id="workshops">
+  <div class="catalogue-heading-layout">
+  <div class="catalogue-marker">03</div>
+
   <div class="section-heading">
     <p class="eyebrow">АВТОРСКИЕ МАСТЕР-КЛАССЫ</p>
     <h2>Выберите свой диалог</h2>
   </div>
+</div>
 
   <div class="cards">
   {% for workshop in collections.workshops | sort(false, false, "data.order") %}
