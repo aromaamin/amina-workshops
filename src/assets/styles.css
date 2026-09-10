@@ -148,10 +148,12 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 }
 
 .home-hero .button {
-  padding: 15px 21px;
-  background: var(--text);
+  width: auto;
+  padding: 16px 24px;
+  background: #2b2926;
   color: var(--paper);
-  border-color: var(--text);
+  border-color: #2b2926;
+  border-radius: 2px;
 }
 
 .home-hero-art {
