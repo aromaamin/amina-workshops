@@ -420,7 +420,7 @@ h3 a { text-decoration:none; }
   overflow-x: auto;
   overflow-y: hidden;
 
-  padding-bottom: 12px;
+  padding: 0 180px 12px 0;
 
   scroll-snap-type: x proximity;
   scrollbar-width: none;
