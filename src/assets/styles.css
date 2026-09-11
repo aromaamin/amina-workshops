@@ -258,6 +258,90 @@ main {
 .workshop-gallery-item:hover img {
   transform: scale(1.025);
 }
+.workshop-gallery-open {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.workshop-gallery-open img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.workshop-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  background: rgba(24, 22, 20, .82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  transition:
+    opacity .3s ease,
+    visibility .3s ease;
+}
+
+.workshop-lightbox.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.workshop-lightbox-image {
+  display: block;
+  max-width: min(1100px, 88vw);
+  max-height: 84vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 24px 70px rgba(0,0,0,.28);
+}
+
+.workshop-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255,255,255,.9);
+  color: #2b2926;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .workshop-lightbox {
+    padding: 12px;
+  }
+
+  .workshop-lightbox-image {
+    max-width: 100%;
+    max-height: calc(100dvh - 24px);
+  }
+
+  .workshop-lightbox-close {
+    top: 14px;
+    right: 14px;
+  }
+}
 
 }
 .eyebrow {
