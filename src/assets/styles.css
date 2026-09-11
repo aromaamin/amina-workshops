@@ -50,6 +50,31 @@ main {
   padding:88px 54px 76px 28px;
   display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
 }
+/* WORKSHOP PAGE HERO */
+
+.workshop-hero {
+  width: min(1480px, calc(100% - 96px));
+  max-width: 1480px;
+  margin: 0 auto;
+  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
+  min-height: 680px;
+  border-bottom: 1px solid var(--line);
+}
+
+.workshop-hero > div:first-child {
+  padding: 72px 64px 72px 0;
+}
+
+.workshop-hero .hero-art {
+  min-height: 680px;
+  overflow: hidden;
+}
+
+.workshop-hero .hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .eyebrow {
   font-size:12px; letter-spacing:.16em; font-weight:700; margin:0 0 24px;
 }
