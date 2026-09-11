@@ -162,9 +162,9 @@ main {
   position: relative;
   padding: 6px 14px 6px 0;
   margin-right: 14px;
-  font-size: 12px;
-  line-height: 1.4;
-  letter-spacing: .015em;
+  font-size: 14px;
+  line-height: 1.45;
+  letter-spacing: .01em;
 }
 
 .workshop-includes span:not(:last-child)::after {
