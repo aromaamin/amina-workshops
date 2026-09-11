@@ -56,6 +56,33 @@ layout: base.njk
 
   </div>
 </section>
+{% if program %}
+<section class="workshop-detail">
+  <div class="workshop-detail-layout">
+    <div class="workshop-detail-label">
+      <span>Как проходит встреча</span>
+    </div>
+
+    <div class="workshop-detail-text">
+      {{ program | safe }}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if takeaway %}
+<section class="workshop-detail">
+  <div class="workshop-detail-layout">
+    <div class="workshop-detail-label">
+      <span>Что вы унесёте с собой</span>
+    </div>
+
+    <div class="workshop-detail-text">
+      {{ takeaway | safe }}
+    </div>
+  </div>
+</section>
+{% endif %}
 {% if gallery and gallery.length %}
 <section class="workshop-gallery">
   <div class="workshop-gallery-head">
