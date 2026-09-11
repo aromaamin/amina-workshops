@@ -2,6 +2,18 @@
 layout: base.njk
 ---
 <article class="workshop-page">
+<div class="workshop-back-wrap">
+  <button class="workshop-back" type="button" onclick="
+    if (document.referrer && new URL(document.referrer).origin === window.location.origin) {
+      history.back();
+    } else {
+      window.location.href = '/';
+    }
+  ">
+    <span aria-hidden="true">←</span>
+    <span>Назад</span>
+  </button>
+</div>
   <section class="workshop-hero">
     <div>
       <p class="eyebrow">{{ eyebrow }}</p>
