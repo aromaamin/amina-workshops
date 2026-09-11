@@ -91,11 +91,29 @@ layout: base.njk
 
   <div class="workshop-gallery-grid">
     {% for image in gallery %}
-      <figure class="workshop-gallery-item workshop-gallery-item-{{ loop.index }}">
-        <img src="{{ image }}" alt="" loading="lazy">
-      </figure>
-    {% endfor %}
+  <figure class="workshop-gallery-item workshop-gallery-item-{{ loop.index }}">
+    <button
+      class="workshop-gallery-open"
+      type="button"
+      data-full="{{ image }}"
+      aria-label="Открыть фотографию крупнее"
+    >
+      <img src="{{ image }}" alt="" loading="lazy">
+    </button>
+  </figure>
+{% endfor %}
   </div>
 </section>
+<div class="workshop-lightbox" aria-hidden="true">
+  <button
+    class="workshop-lightbox-close"
+    type="button"
+    aria-label="Закрыть"
+  >
+    ×
+  </button>
+
+  <img class="workshop-lightbox-image" src="" alt="">
+</div>
 {% endif %}
 </article>
