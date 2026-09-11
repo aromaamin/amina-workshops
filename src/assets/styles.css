@@ -751,8 +751,19 @@ mask-image: linear-gradient(
   gap: 13px;
   border-color: rgba(23, 23, 23, .9);
 }
-.facts { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
-.facts span { border:1px solid var(--line); padding:8px 10px; font-size:12px; }
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-bottom: 30px;
+}
+
+.facts span {
+  border: 1px solid var(--line);
+  padding: 9px 13px;
+  font-size: 14px;
+  line-height: 1.2;
+}
 .workshop-content { padding:80px 28px 110px; }
 .prose { max-width:720px; margin:0 auto; font-size:18px; }
 .prose h2 { font-size:40px; margin-top:60px; margin-bottom:18px; }
