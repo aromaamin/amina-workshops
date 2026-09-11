@@ -201,32 +201,32 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .home-hero .lead,
 .home-hero .button {
   opacity: 0;
-  animation: heroFadeUp .8s cubic-bezier(.22, .61, .36, 1) forwards;
+  animation: heroFadeUp 1.2s cubic-bezier(.22, .61, .36, 1) forwards;
 }
 
 .hero-marker {
-  animation-delay: .08s;
+  animation-delay: .10s;
 }
 
 .home-hero .eyebrow {
-  animation-delay: .14s;
+  animation-delay: .28s;
 }
 
 .home-title {
-  animation-delay: .22s;
+  animation-delay: .48s;
 }
 
 .home-hero .lead {
-  animation-delay: .34s;
+  animation-delay: .82s;
 }
 
 .home-hero .button {
-  animation-delay: .44s;
+  animation-delay: 1.08s;
 }
 
 .home-hero-art {
   opacity: 0;
-  animation: heroFadeIn 1.25s ease .12s forwards;
+  animation: heroFadeIn 1.8s ease .22s forwards;
 }
 .home-hero .button {
   position: relative;
