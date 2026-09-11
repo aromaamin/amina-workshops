@@ -150,18 +150,18 @@ main {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 0;
+  justify-content: space-between;
   width: 100%;
-  margin-top: 52px;
-  padding-top: 24px;
+  margin-top: 78px;
+  padding-top: 26px;
   border-top: 1px solid var(--line);
   white-space: nowrap;
 }
 
 .workshop-includes span {
   position: relative;
-  padding: 6px 14px 6px 0;
-  margin-right: 14px;
+  padding: 0;
+  margin: 0;
   font-size: 14px;
   line-height: 1.45;
   letter-spacing: .01em;
@@ -169,8 +169,8 @@ main {
 
 .workshop-includes span:not(:last-child)::after {
   content: "·";
-  position: absolute;
-  right: 0;
+  display: inline-block;
+  margin-left: 18px;
   opacity: .45;
 }
 .eyebrow {
