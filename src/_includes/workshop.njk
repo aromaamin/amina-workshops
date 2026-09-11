@@ -44,14 +44,6 @@ layout: base.njk
         {{ content | safe }}
       </div>
 
-      <div class="workshop-includes">
-        {% if duration %}<span>{{ duration }}</span>{% endif %}
-        <span>лекция-презентация</span>
-        <span>живопись на холсте</span>
-        <span>профессиональные материалы</span>
-        <span>индивидуальное сопровождение</span>
-        <span>напитки и угощения</span>
-      </div>
     </div>
 
   </div>
@@ -83,6 +75,14 @@ layout: base.njk
   </div>
 </section>
 {% endif %}
+<div class="workshop-includes">
+  {% if duration %}<span>{{ duration }}</span>{% endif %}
+  <span>лекция-презентация</span>
+  <span>живопись на холсте</span>
+  <span>профессиональные материалы</span>
+  <span>индивидуальное сопровождение</span>
+  <span>напитки и угощения</span>
+</div>
 {% if gallery and gallery.length %}
 <section class="workshop-gallery">
   <div class="workshop-gallery-head">
