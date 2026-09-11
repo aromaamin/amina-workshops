@@ -133,12 +133,46 @@ layout: base.njk
 {% endif %}
 </article>
 <script>
-  const galleryButtons = document.querySelectorAll('.workshop-gallery-open');
+  const galleryButtons = Array.from(
+    document.querySelectorAll('.workshop-gallery-open')
+  );
+
   const lightbox = document.querySelector('.workshop-lightbox');
   const lightboxImage = document.querySelector('.workshop-lightbox-image');
   const lightboxClose = document.querySelector('.workshop-lightbox-close');
+  const lightboxPrev = document.querySelector('.workshop-lightbox-prev');
+  const lightboxNext = document.querySelector('.workshop-lightbox-next');
 
-  if (galleryButtons.length && lightbox && lightboxImage && lightboxClose) {
+  let currentImageIndex = 0;
+
+  if (
+    galleryButtons.length &&
+    lightbox &&
+    lightboxImage &&
+    lightboxClose &&
+    lightboxPrev &&
+    lightboxNext
+  ) {
+    const showImage = (index) => {
+      currentImageIndex =
+        (index + galleryButtons.length) % galleryButtons.length;
+
+      const fullImage =
+        galleryButtons[currentImageIndex].dataset.full;
+
+      if (fullImage) {
+        lightboxImage.src = fullImage;
+      }
+    };
+
+    const openLightbox = (index) => {
+      showImage(index);
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    };
+
     const closeLightbox = () => {
       lightbox.classList.remove('is-open');
       lightbox.setAttribute('aria-hidden', 'true');
@@ -146,20 +180,26 @@ layout: base.njk
       document.body.style.overflow = '';
     };
 
-    galleryButtons.forEach((button) => {
+    galleryButtons.forEach((button, index) => {
       button.addEventListener('click', () => {
-        const fullImage = button.dataset.full;
-
-        if (!fullImage) return;
-
-        lightboxImage.src = fullImage;
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
+        openLightbox(index);
       });
     });
 
-    lightboxClose.addEventListener('click', closeLightbox);
+    lightboxPrev.addEventListener('click', (event) => {
+      event.stopPropagation();
+      showImage(currentImageIndex - 1);
+    });
+
+    lightboxNext.addEventListener('click', (event) => {
+      event.stopPropagation();
+      showImage(currentImageIndex + 1);
+    });
+
+    lightboxClose.addEventListener('click', (event) => {
+      event.stopPropagation();
+      closeLightbox();
+    });
 
     lightbox.addEventListener('click', (event) => {
       if (event.target === lightbox) {
@@ -168,8 +208,18 @@ layout: base.njk
     });
 
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+      if (!lightbox.classList.contains('is-open')) return;
+
+      if (event.key === 'Escape') {
         closeLightbox();
+      }
+
+      if (event.key === 'ArrowLeft') {
+        showImage(currentImageIndex - 1);
+      }
+
+      if (event.key === 'ArrowRight') {
+        showImage(currentImageIndex + 1);
       }
     });
   }
