@@ -117,3 +117,45 @@ layout: base.njk
 </div>
 {% endif %}
 </article>
+<script>
+  const galleryButtons = document.querySelectorAll('.workshop-gallery-open');
+  const lightbox = document.querySelector('.workshop-lightbox');
+  const lightboxImage = document.querySelector('.workshop-lightbox-image');
+  const lightboxClose = document.querySelector('.workshop-lightbox-close');
+
+  if (galleryButtons.length && lightbox && lightboxImage && lightboxClose) {
+    const closeLightbox = () => {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+    };
+
+    galleryButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const fullImage = button.dataset.full;
+
+        if (!fullImage) return;
+
+        lightboxImage.src = fullImage;
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
+</script>
