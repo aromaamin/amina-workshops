@@ -35,13 +35,14 @@ takeaway: >-
   творчества, новые знания и немного другой взгляд на искусство. Способность
   видеть в нём больше, чем прежде.
 gallery:
-  - /assets/img7611.jpeg
-  - /assets/img7605.jpeg
-  - /assets/img7594.jpeg
-  - /assets/img7617.jpeg
-  - /assets/img5012.jpeg
-  - /assets/img5037.jpeg
-  - /assets/img5007.jpeg
+  - /assets/img7605pressetnew.jpg
+  - /assets/img7611presetnew.jpg
+  - /assets/img7594pressetnew.jpg
+  - /assets/img7617pressetnew.jpg
+  - /assets/img5042pressetnew.jpg
+  - /assets/img5037pressetnew.jpg
+  - /assets/img5012pressetnew.jpg
+  - /assets/img5007pressetnew.jpg
 video: /assets/impressionism-workshop.mp4
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20мастер-классе%20«Диалог%20с%20импрессионистами».
 order: 1
