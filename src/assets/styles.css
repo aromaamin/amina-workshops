@@ -56,17 +56,20 @@ main {
   width: min(1480px, calc(100% - 96px));
   max-width: 1480px;
   margin: 0 auto;
-  grid-template-columns: minmax(0, 0.86fr) minmax(0, 1.14fr);
-  min-height: 680px;
+  grid-template-columns: minmax(0, .94fr) minmax(0, 1.06fr);
+  align-items: center;
+  min-height: 0;
+  padding: 64px 0;
   border-bottom: 1px solid var(--line);
 }
 
 .workshop-hero > div:first-child {
-  padding: 72px 64px 72px 0;
+  padding: 48px 64px 48px 0;
 }
 
 .workshop-hero .hero-art {
-  min-height: 680px;
+  aspect-ratio: 4 / 3;
+  min-height: 0;
   overflow: hidden;
 }
 
