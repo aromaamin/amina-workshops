@@ -170,7 +170,12 @@ const slider = document.querySelector('.cards');
   });
 
   revealItems.forEach((item) => {
-    item.classList.add('reveal');
-    revealObserver.observe(item);
+  item.classList.add('reveal');
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      revealObserver.observe(item);
+    });
   });
+});
 </script>
