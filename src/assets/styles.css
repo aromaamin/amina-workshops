@@ -209,14 +209,12 @@ main {
   letter-spacing: .005em;
 }
 
-.workshop-includes span:not(:last-child)::after {
-  content: "•";
-  display: inline-block;
-  margin-left: 20px;
+.workshop-includes i {
+  flex: 0 0 auto;
+  font-style: normal;
   font-size: 10px;
   font-weight: 700;
   line-height: 1;
-  vertical-align: middle;
   opacity: .72;
 }
 /* WORKSHOP GALLERY */
