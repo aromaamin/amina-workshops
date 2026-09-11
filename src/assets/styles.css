@@ -216,14 +216,14 @@ main {
 /* WORKSHOP GALLERY */
 
 .workshop-gallery {
-  width: min(1480px, calc(100% - 96px));
+  width: min(1180px, calc(100% - 96px));
   margin: 0 auto;
-  padding: 104px 0 112px;
+  padding: 92px 0 104px;
   border-bottom: 1px solid var(--line);
 }
 
 .workshop-gallery-head {
-  margin-bottom: 34px;
+  margin-bottom: 28px;
 }
 
 .workshop-gallery-label {
@@ -236,13 +236,13 @@ main {
 
 .workshop-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .workshop-gallery-item {
   margin: 0;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
   background: var(--paper);
 }
@@ -252,43 +252,15 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
 }
 
-/* editorial rhythm */
-
-.workshop-gallery-item-1 {
-  grid-column: 1 / span 7;
-  aspect-ratio: 4 / 3;
-}
-
-.workshop-gallery-item-2 {
-  grid-column: 8 / span 5;
-  aspect-ratio: 3 / 4;
-}
-
-.workshop-gallery-item-3 {
-  grid-column: 1 / span 4;
-  aspect-ratio: 3 / 4;
-}
-
-.workshop-gallery-item-4 {
-  grid-column: 5 / span 4;
-  aspect-ratio: 1 / 1;
-}
-
-.workshop-gallery-item-5 {
-  grid-column: 9 / span 4;
-  aspect-ratio: 3 / 4;
-}
-
-.workshop-gallery-item-6 {
-  grid-column: 1 / span 6;
-  aspect-ratio: 4 / 3;
+.workshop-gallery-item:hover img {
+  transform: scale(1.025);
 }
 
 .workshop-gallery-item-7 {
-  grid-column: 7 / span 6;
-  aspect-ratio: 4 / 3;
+  grid-column: 2;
 }
 .eyebrow {
   font-size: 13px;
