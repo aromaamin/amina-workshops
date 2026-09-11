@@ -32,9 +32,28 @@ layout: base.njk
     </div>
   </section>
 
-  <section class="workshop-content">
-    <div class="prose">
-      {{ content | safe }}
+  <section class="workshop-about">
+  <div class="workshop-about-layout">
+
+    <div class="workshop-about-label">
+      <span>О мастер-классе</span>
     </div>
-  </section>
+
+    <div class="workshop-about-main">
+      <div class="workshop-about-text">
+        {{ content | safe }}
+      </div>
+
+      <div class="workshop-includes">
+        {% if duration %}<span>{{ duration }}</span>{% endif %}
+        <span>лекция-презентация</span>
+        <span>живопись на холсте</span>
+        <span>профессиональные материалы</span>
+        <span>индивидуальное сопровождение</span>
+        <span>напитки и угощения</span>
+      </div>
+    </div>
+
+  </div>
+</section>
 </article>
