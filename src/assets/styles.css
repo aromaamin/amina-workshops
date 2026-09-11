@@ -383,7 +383,22 @@ h3 a { text-decoration:none; }
   gap: 36px;
   align-items: start;
 }
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22, .61, .36, 1);
+}
 
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards.reveal {
+  transition-delay: .14s;
+}
 .catalogue-marker {
   font-family: "Playfair Display", Georgia, serif;
   font-size: 34px;
