@@ -449,7 +449,14 @@ h3 a { text-decoration:none; }
   opacity: 1;
   transform: translateY(0);
 }
+.statement-text.reveal {
+  transition-duration: 1.25s;
+}
 
+.statement-notes.reveal {
+  transition-duration: 1.05s;
+  transition-delay: .22s;
+}
 .cards.reveal {
   transition-delay: .14s;
 }
