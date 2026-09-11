@@ -56,4 +56,19 @@ layout: base.njk
 
   </div>
 </section>
+{% if gallery and gallery.length %}
+<section class="workshop-gallery">
+  <div class="workshop-gallery-head">
+    <span class="workshop-gallery-label">Галерея</span>
+  </div>
+
+  <div class="workshop-gallery-grid">
+    {% for image in gallery %}
+      <figure class="workshop-gallery-item workshop-gallery-item-{{ loop.index }}">
+        <img src="{{ image }}" alt="" loading="lazy">
+      </figure>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 </article>
