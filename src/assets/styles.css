@@ -216,7 +216,7 @@ main {
 /* WORKSHOP GALLERY */
 
 .workshop-gallery {
-  width: min(1180px, calc(100% - 96px));
+  width: min(1480px, calc(100% - 96px));
   margin: 0 auto;
   padding: 92px 0 104px;
   border-bottom: 1px solid var(--line);
@@ -236,8 +236,8 @@ main {
 
 .workshop-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
 }
 
 .workshop-gallery-item {
@@ -259,8 +259,6 @@ main {
   transform: scale(1.025);
 }
 
-.workshop-gallery-item-7 {
-  grid-column: 2;
 }
 .eyebrow {
   font-size: 13px;
