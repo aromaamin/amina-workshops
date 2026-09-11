@@ -479,7 +479,21 @@ mask-image: linear-gradient(
 }
 .card-body { padding:30px; }
 .meta, .status { font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
-.text-link { display:inline-block; margin-top:10px; text-decoration:none; border-bottom:1px solid currentColor; }
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(23, 23, 23, .45);
+  padding-bottom: 2px;
+  transition: gap .3s ease, border-color .3s ease;
+}
+
+.text-link:hover {
+  gap: 13px;
+  border-color: rgba(23, 23, 23, .9);
+}
 .facts { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px; }
 .facts span { border:1px solid var(--line); padding:8px 10px; font-size:12px; }
 .workshop-content { padding:80px 28px 110px; }
