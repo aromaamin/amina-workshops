@@ -326,6 +326,51 @@ main {
   line-height: 1;
   cursor: pointer;
 }
+.workshop-lightbox-prev,
+.workshop-lightbox-next {
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  width: 48px;
+  height: 64px;
+  padding: 0;
+  border: 0;
+  background: rgba(255,255,255,.12);
+  color: rgba(255,255,255,.92);
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transition:
+    background .25s ease,
+    transform .25s ease,
+    opacity .25s ease;
+}
+
+.workshop-lightbox-prev {
+  left: 28px;
+}
+
+.workshop-lightbox-next {
+  right: 28px;
+}
+
+.workshop-lightbox-prev:hover,
+.workshop-lightbox-next:hover {
+  background: rgba(255,255,255,.2);
+}
+
+.workshop-lightbox-prev:hover {
+  transform: translate(-3px, -50%);
+}
+
+.workshop-lightbox-next:hover {
+  transform: translate(3px, -50%);
+}
 
 @media (max-width: 760px) {
   .workshop-lightbox {
@@ -336,7 +381,21 @@ main {
     max-width: 100%;
     max-height: calc(100dvh - 24px);
   }
+  .workshop-lightbox-prev,
+  .workshop-lightbox-next {
+    width: 42px;
+    height: 58px;
+    font-size: 38px;
+    background: rgba(20,20,20,.28);
+  }
 
+  .workshop-lightbox-prev {
+    left: 8px;
+  }
+
+  .workshop-lightbox-next {
+    right: 8px;
+  }
   .workshop-lightbox-close {
     top: 14px;
     right: 14px;
