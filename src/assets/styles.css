@@ -122,12 +122,11 @@ main {
 
 .workshop-about-label span {
   display: inline-block;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: .16em;
   text-transform: uppercase;
 }
-
 .workshop-about-main {
   max-width: 900px;
 }
@@ -175,7 +174,10 @@ main {
   opacity: .45;
 }
 .eyebrow {
-  font-size:12px; letter-spacing:.16em; font-weight:700; margin:0 0 24px;
+  font-size: 13px;
+  letter-spacing: .16em;
+  font-weight: 700;
+  margin: 0 0 24px;
 }
 h1, h2, h3 {
   font-family: Georgia, "Times New Roman", serif;
