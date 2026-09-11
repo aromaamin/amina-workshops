@@ -86,7 +86,22 @@ title: Авторские художественные мастер-классы
   </div>
 </section>
 <script>
-  const slider = document.querySelector('.cards');
+  const workshopsButton = document.querySelector('#workshops-button');
+
+if (workshopsButton) {
+  workshopsButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    document.querySelector('#workshops')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    history.replaceState(null, '', window.location.pathname);
+  });
+}
+
+const slider = document.querySelector('.cards');
 
   if (slider) {
     let isDown = false;
