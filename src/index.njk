@@ -155,7 +155,7 @@ const slider = document.querySelector('.cards');
 </script>
 <script>
   const revealItems = document.querySelectorAll(
-  '.statement-text, .statement-notes, .catalogue-heading-layout, .cards'
+  '.catalogue-heading-layout, .cards'
 );
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -178,4 +178,24 @@ const slider = document.querySelector('.cards');
     });
   });
 });
+const statementItems = document.querySelectorAll(
+  '.statement-text, .statement-notes'
+);
+
+const statementObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      statementObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+setTimeout(() => {
+  statementItems.forEach((item) => {
+    statementObserver.observe(item);
+  });
+}, 900);
 </script>
