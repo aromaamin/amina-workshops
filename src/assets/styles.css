@@ -105,7 +105,7 @@ main {
 .workshop-about {
   width: min(1480px, calc(100% - 96px));
   margin: 0 auto;
-  padding: 96px 0 104px;
+  padding: 76px 0 48px;
 }
 
 .workshop-about-layout {
@@ -133,7 +133,7 @@ main {
 
 .workshop-about-text {
   font-size: 18px;
-  line-height: 1.68;
+  line-height: 1.58;
   letter-spacing: -.01em;
 }
 
@@ -149,7 +149,7 @@ main {
 .workshop-detail {
   width: min(1480px, calc(100% - 96px));
   margin: 0 auto;
-  padding: 88px 0 0;
+  padding: 48px 0 0;
 }
 
 .workshop-detail-layout {
@@ -173,7 +173,7 @@ main {
 
 .workshop-detail-text {
   font-size: 18px;
-  line-height: 1.68;
+  line-height: 1.58;
   letter-spacing: -.01em;
 }
 
