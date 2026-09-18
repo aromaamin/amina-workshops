@@ -253,4 +253,23 @@ if (workshopBack) {
       }
     });
   }
+const workshopRevealItems = document.querySelectorAll(
+  '.workshop-about-layout, .workshop-detail-layout'
+);
+
+const workshopRevealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      workshopRevealObserver.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+workshopRevealItems.forEach((item) => {
+  item.classList.add('workshop-scroll-reveal');
+  workshopRevealObserver.observe(item);
+});
 </script>
