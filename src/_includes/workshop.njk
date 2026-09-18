@@ -253,23 +253,33 @@ if (workshopBack) {
       }
     });
   }
-const workshopRevealItems = document.querySelectorAll(
-  '.workshop-about-layout, .workshop-detail-layout'
+const workshopRevealItems = Array.from(
+  document.querySelectorAll(
+    '.workshop-about-layout, .workshop-detail-layout'
+  )
 );
-
-const workshopRevealObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      workshopRevealObserver.unobserve(entry.target);
-    }
-  });
-}, {
-  threshold: 0.12
-});
 
 workshopRevealItems.forEach((item) => {
   item.classList.add('workshop-scroll-reveal');
-  workshopRevealObserver.observe(item);
 });
+
+if (workshopRevealItems.length) {
+  const workshopRevealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        workshopRevealObserver.disconnect();
+
+        workshopRevealItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('is-visible');
+          }, index * 750);
+        });
+      }
+    });
+  }, {
+    threshold: 0.12
+  });
+
+  workshopRevealObserver.observe(workshopRevealItems[0]);
+}
 </script>
