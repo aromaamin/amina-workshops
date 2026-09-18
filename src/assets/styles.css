@@ -193,6 +193,20 @@ main {
     transform: translateY(0);
   }
 }
+/* WORKSHOP CONTENT REVEAL */
+
+.workshop-scroll-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 1.55s ease,
+    transform 1.55s cubic-bezier(.22,.61,.36,1);
+}
+
+.workshop-scroll-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* WORKSHOP ABOUT */
 
 .workshop-about {
