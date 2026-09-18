@@ -195,17 +195,28 @@ main {
 }
 /* WORKSHOP CONTENT REVEAL */
 
-.workshop-scroll-reveal {
+.workshop-scroll-reveal .workshop-about-label,
+.workshop-scroll-reveal .workshop-detail-label,
+.workshop-scroll-reveal .workshop-about-main,
+.workshop-scroll-reveal .workshop-detail-text {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(22px);
   transition:
     opacity 1.55s ease,
     transform 1.55s cubic-bezier(.22,.61,.36,1);
 }
 
-.workshop-scroll-reveal.is-visible {
+.workshop-scroll-reveal.is-visible .workshop-about-label,
+.workshop-scroll-reveal.is-visible .workshop-detail-label {
   opacity: 1;
   transform: translateY(0);
+}
+
+.workshop-scroll-reveal.is-visible .workshop-about-main,
+.workshop-scroll-reveal.is-visible .workshop-detail-text {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: .32s;
 }
 /* WORKSHOP ABOUT */
 
