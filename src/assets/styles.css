@@ -136,6 +136,63 @@ main {
   transparent 100%
 );
 }
+/* WORKSHOP HERO REVEAL */
+
+.workshop-hero-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: workshopHeroReveal 1.15s cubic-bezier(.22,.61,.36,1) forwards;
+}
+
+.workshop-hero-reveal-1 {
+  animation-delay: .10s;
+}
+
+.workshop-hero-reveal-2 {
+  animation-delay: .22s;
+}
+
+.workshop-hero-reveal-3 {
+  animation-delay: .38s;
+}
+
+.workshop-hero-reveal-4 {
+  animation-delay: .52s;
+}
+
+.workshop-hero-reveal-5 {
+  animation-delay: .64s;
+}
+
+.workshop-hero-image-reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: workshopHeroImageReveal 1.45s cubic-bezier(.22,.61,.36,1) .18s forwards;
+}
+
+@keyframes workshopHeroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes workshopHeroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* WORKSHOP ABOUT */
 
 .workshop-about {
