@@ -141,7 +141,7 @@ main {
 .workshop-hero-reveal {
   opacity: 0;
   transform: translateY(18px);
-  animation: workshopHeroReveal 1.15s cubic-bezier(.22,.61,.36,1) forwards;
+  animation: workshopHeroReveal 1.55s cubic-bezier(.22,.61,.36,1) forwards;
 }
 
 .workshop-hero-reveal-1 {
@@ -167,7 +167,7 @@ main {
 .workshop-hero-image-reveal {
   opacity: 0;
   transform: translateY(10px);
-  animation: workshopHeroImageReveal 1.45s cubic-bezier(.22,.61,.36,1) .18s forwards;
+  animation: workshopHeroImageReveal 1.75s cubic-bezier(.22,.61,.36,1) .18s forwards;
 }
 
 @keyframes workshopHeroReveal {
