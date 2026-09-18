@@ -546,6 +546,12 @@ h1, h2, h3 {
   margin-top:0;
 }
 h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
+.workshop-hero h1:not(.special-title) {
+  font-size: clamp(56px, 5.4vw, 82px);
+  max-width: none;
+  line-height: .96;
+  letter-spacing: -.025em;
+}
 .special-title {
   position: relative;
   z-index: 4;
