@@ -1232,3 +1232,342 @@ mask-image: linear-gradient(
   line-height: 1.2 !important;
   letter-spacing: -.018em;
 }
+/* =========================================
+   ABOUT PROJECT — EDITORIAL PAGE
+   ========================================= */
+
+/* Общая ширина страницы */
+
+.about-project {
+  width: 100%;
+}
+
+.about-chapter,
+.about-project-manifesto,
+.about-creative-bridge {
+  width: min(1480px, calc(100% - 96px));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* 01 — КУЛЬТУРА */
+
+.about-chapter-opening {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 36px;
+  padding: 96px 0 112px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-chapter-number {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  padding-top: 9px;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: .08em;
+  color: var(--muted);
+}
+
+.about-opening-text {
+  grid-column: 2;
+  max-width: 900px;
+}
+
+.about-opening-text .about-project-intro {
+  max-width: 900px !important;
+  margin: 0 0 42px !important;
+}
+
+.about-opening-text > p:not(.about-project-intro) {
+  max-width: 700px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+
+/* Широкий музейный кадр */
+
+.about-image {
+  margin: 0;
+  overflow: hidden;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image-museum {
+  grid-column: 2;
+  width: 100%;
+  height: clamp(430px, 39vw, 610px);
+  margin-top: 68px;
+}
+
+.about-image-museum img {
+  object-position: center 48%;
+}
+
+
+/* Манифест — смысловой переход */
+
+.about-project-manifesto {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 36px;
+  padding: 96px 0 108px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-project-manifesto > * {
+  grid-column: 2;
+}
+
+.about-project-manifesto .about-project-emphasis {
+  max-width: 880px !important;
+  margin: 0 0 42px !important;
+  font-size: clamp(34px, 3.5vw, 52px) !important;
+  line-height: 1.13 !important;
+}
+
+.about-project-manifesto-text {
+  max-width: 650px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+
+/* 02 — ВНИМАТЕЛЬНЫЙ ВЗГЛЯД */
+
+.about-chapter-looking {
+  display: grid;
+  grid-template-columns: 90px minmax(0, .92fr) minmax(360px, .72fr);
+  column-gap: 36px;
+  row-gap: 58px;
+  align-items: start;
+  padding: 104px 0 116px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-chapter-looking .about-chapter-number {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.about-looking-heading {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.about-looking-heading h2 {
+  max-width: 780px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(44px, 4.7vw, 70px);
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -.028em;
+}
+
+.about-image-looking {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  width: min(100%, 520px);
+  aspect-ratio: 3 / 4;
+  justify-self: end;
+}
+
+.about-image-looking img {
+  object-position: center center;
+}
+
+.about-looking-text {
+  grid-column: 2;
+  grid-row: 2;
+  max-width: 720px;
+}
+
+.about-looking-text > p {
+  max-width: 700px;
+  margin: 0 0 26px;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+.about-looking-text .about-project-emphasis-small {
+  max-width: 650px !important;
+  margin: 50px 0 0 !important;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 44px) !important;
+  line-height: 1.18 !important;
+  letter-spacing: -.018em;
+}
+
+
+/* 03 — СОБСТВЕННЫЙ ОПЫТ */
+
+.about-creative-bridge {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 36px;
+  padding: 104px 0 116px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-creative-bridge .about-chapter-number {
+  grid-column: 1;
+  grid-row: 1 / span 3;
+}
+
+.about-image-creative {
+  grid-column: 2;
+  width: min(920px, 78%);
+  height: clamp(420px, 40vw, 610px);
+  justify-self: end;
+}
+
+.about-image-creative img {
+  object-position: center center;
+}
+
+.about-creative-quote {
+  grid-column: 2;
+  max-width: 700px;
+  margin: 58px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 3.4vw, 50px);
+  line-height: 1.16;
+  letter-spacing: -.02em;
+}
+
+
+/* ФИНАЛ */
+
+.about-chapter-final {
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 36px;
+  padding: 112px 0 128px;
+}
+
+.about-final-heading,
+.about-final-text {
+  grid-column: 2;
+}
+
+.about-final-heading h2 {
+  max-width: 900px;
+  margin: 0 0 66px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 74px);
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -.03em;
+}
+
+.about-final-text {
+  max-width: 760px;
+}
+
+.about-final-text p {
+  margin: 0 0 27px;
+  font-size: 18px;
+  line-height: 1.72;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+  .about-project-hero,
+  .about-chapter,
+  .about-project-manifesto,
+  .about-creative-bridge {
+    width: calc(100% - 40px);
+  }
+
+  .about-project-hero {
+    padding: 64px 0 72px;
+  }
+
+  .about-project-hero h1 {
+    font-size: clamp(46px, 13vw, 64px);
+    line-height: 1;
+  }
+
+  .about-chapter-opening,
+  .about-project-manifesto,
+  .about-chapter-looking,
+  .about-creative-bridge,
+  .about-chapter-final {
+    display: block;
+    padding: 70px 0 78px;
+  }
+
+  .about-chapter-number {
+    display: block;
+    margin-bottom: 34px;
+    padding-top: 0;
+  }
+
+  .about-opening-text .about-project-intro {
+    font-size: 30px !important;
+  }
+
+  .about-opening-text > p,
+  .about-project-manifesto-text,
+  .about-looking-text > p,
+  .about-final-text p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .about-image-museum {
+    width: 100%;
+    height: 54vw;
+    min-height: 250px;
+    margin-top: 46px;
+  }
+
+  .about-project-manifesto .about-project-emphasis {
+    font-size: 34px !important;
+  }
+
+  .about-looking-heading h2,
+  .about-final-heading h2 {
+    font-size: 44px;
+  }
+
+  .about-image-looking {
+    width: 78%;
+    margin: 44px 0 46px auto;
+  }
+
+  .about-looking-text .about-project-emphasis-small {
+    font-size: 30px !important;
+  }
+
+  .about-image-creative {
+    width: 88%;
+    height: 62vw;
+    min-height: 300px;
+    margin: 0 0 0 auto;
+  }
+
+  .about-creative-quote {
+    margin-top: 44px;
+    font-size: 32px;
+  }
+
+  .about-final-heading h2 {
+    margin-bottom: 46px;
+  }
+}
