@@ -10,26 +10,26 @@ layout: base.njk
 </div>
   <section class="workshop-hero">
     <div>
-      <p class="eyebrow">{{ eyebrow }}</p>
+      <p class="eyebrow workshop-hero-reveal workshop-hero-reveal-1">{{ eyebrow }}</p>
       {% if slug == "impressionists" %}
-  <h1 class="special-title">
+  <h1 class="special-title workshop-hero-reveal workshop-hero-reveal-2">
     <span class="special-title-main">Диалог с</span>
     <span class="special-title-accent">импрессионистами</span>
   </h1>
 {% else %}
-  <h1>{{ title }}</h1>
+  <h1 class="workshop-hero-reveal workshop-hero-reveal-2">{{ title }}</h1>
 {% endif %}
-      <p class="lead">{{ summary }}</p>
-      <div class="facts">
+      <p class="lead workshop-hero-reveal workshop-hero-reveal-3">{{ summary }}</p>
+      <div class="facts workshop-hero-reveal workshop-hero-reveal-4">
         {% if duration %}<span>{{ duration }}</span>{% endif %}
         {% if price %}<span>{{ price }}</span>{% endif %}
         {% if status %}<span>{{ status }}</span>{% endif %}
       </div>
       {% if whatsapp %}
-      <a class="button" href="{{ whatsapp }}" target="_blank" rel="noopener">Записаться в WhatsApp</a>
+      <a class="button workshop-hero-reveal workshop-hero-reveal-5" href="{{ whatsapp }}" target="_blank" rel="noopener">Записаться в WhatsApp</a>
       {% endif %}
     </div>
-    <div class="hero-art">
+    <div class="hero-art workshop-hero-image-reveal">
       {% if cover %}
         <img src="{{ cover }}" alt="">
       {% else %}
