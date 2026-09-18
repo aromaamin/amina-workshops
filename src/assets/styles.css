@@ -1149,3 +1149,124 @@ mask-image: linear-gradient(
   .statement, .catalogue, .workshop-content { padding-left:20px; padding-right:20px; }
   .cards { grid-template-columns:1fr; }
 }
+/* ========================================
+   ABOUT PROJECT
+   ======================================== */
+
+.about-project {
+  width: 100%;
+}
+
+/* HERO */
+
+.about-project-hero {
+  width: min(1480px, calc(100% - 96px));
+  margin: 0 auto;
+  padding: 92px 0 108px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-project-hero .eyebrow {
+  margin-bottom: 34px;
+}
+
+.about-project-hero h1 {
+  max-width: 1120px;
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(58px, 6.2vw, 96px);
+  font-weight: 400;
+  line-height: .98;
+  letter-spacing: -.035em;
+}
+
+/* CONTENT */
+
+.about-project-content {
+  width: min(1480px, calc(100% - 96px));
+  margin: 0 auto;
+}
+
+.about-project-section {
+  display: grid;
+  grid-template-columns: minmax(180px, .30fr) minmax(0, .70fr);
+  column-gap: 72px;
+  padding: 92px 0 104px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-project-section > * {
+  grid-column: 2;
+}
+
+.about-project-section p {
+  max-width: 820px;
+  margin: 0 0 26px;
+  font-size: 19px;
+  line-height: 1.72;
+}
+
+.about-project-section h2 {
+  max-width: 900px;
+  margin: 0 0 54px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 4.2vw, 66px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.025em;
+}
+
+.about-project-intro {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 44px) !important;
+  line-height: 1.22 !important;
+  letter-spacing: -.015em;
+  margin-bottom: 48px !important;
+}
+
+.about-project-emphasis {
+  max-width: 940px !important;
+  margin: 54px 0 !important;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 3vw, 46px) !important;
+  line-height: 1.2 !important;
+  letter-spacing: -.018em;
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+  .about-project-hero {
+    width: calc(100% - 40px);
+    padding: 64px 0 72px;
+  }
+
+  .about-project-hero h1 {
+    font-size: clamp(46px, 13vw, 64px);
+    line-height: 1;
+  }
+
+  .about-project-content {
+    width: calc(100% - 40px);
+  }
+
+  .about-project-section {
+    display: block;
+    padding: 64px 0 72px;
+  }
+
+  .about-project-section h2 {
+    font-size: 40px;
+    margin-bottom: 38px;
+  }
+
+  .about-project-section p {
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .about-project-intro,
+  .about-project-emphasis {
+    font-size: 28px !important;
+  }
+}
