@@ -1391,10 +1391,11 @@ mask-image: linear-gradient(
 }
 
 .about-looking-heading h2 {
-  max-width: 1080px;
+  width: 100% !important;
+  max-width: none !important;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(44px, 4.7vw, 70px);
+  font-size: clamp(44px, 4.1vw, 64px);
   font-weight: 400;
   line-height: 1.03;
   letter-spacing: -.028em;
