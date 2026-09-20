@@ -1264,13 +1264,24 @@ mask-image: linear-gradient(
 .about-chapter-number {
   grid-column: 1;
   grid-row: 1 / span 4;
-  padding-top: 9px;
-  font-size: 13px;
+  position: relative;
+  padding-top: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
   line-height: 1;
-  letter-spacing: .08em;
-  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #8b8174;
 }
-
+.about-chapter-number::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 34px;
+  width: 1px;
+  height: 155px;
+  background: rgba(43, 41, 38, .18);
+}
 .about-opening-text {
   grid-column: 2;
   max-width: 900px;
