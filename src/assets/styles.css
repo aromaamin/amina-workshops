@@ -1243,7 +1243,9 @@ mask-image: linear-gradient(
 }
 
 .about-chapter,
+.about-chapter-opening,
 .about-project-manifesto,
+.about-chapter-looking,
 .about-creative-bridge {
   width: min(1480px, calc(100% - 96px));
   margin-left: auto;
