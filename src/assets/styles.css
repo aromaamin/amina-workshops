@@ -1369,27 +1369,29 @@ mask-image: linear-gradient(
 
 .about-chapter-looking {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1.25fr) minmax(300px, .75fr);
-  column-gap: 36px;
-  row-gap: 46px;
+  grid-template-columns: 90px minmax(0, 1.15fr) minmax(340px, .85fr);
+  grid-template-areas:
+    "number heading heading"
+    "number text image";
+  column-gap: 52px;
+  row-gap: 54px;
   align-items: start;
   padding: 78px 0 86px;
   border-bottom: 1px solid var(--line);
 }
 
 .about-chapter-looking .about-chapter-number {
-  grid-column: 1;
-  grid-row: 1 / span 2;
+  grid-area: number;
+  align-self: start;
 }
 
 .about-looking-heading {
-  grid-column: 2 / 4;
-  grid-row: 1;
-  max-width: 1040px;
+  grid-area: heading;
+  max-width: 1080px;
 }
 
 .about-looking-heading h2 {
-  max-width: 1040px;
+  max-width: 1080px;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(44px, 4.7vw, 70px);
@@ -1399,9 +1401,8 @@ mask-image: linear-gradient(
 }
 
 .about-looking-text {
-  grid-column: 2;
-  grid-row: 2;
-  max-width: 700px;
+  grid-area: text;
+  max-width: 720px;
 }
 
 .about-looking-text > p {
@@ -1421,11 +1422,11 @@ mask-image: linear-gradient(
 }
 
 .about-image-looking {
-  grid-column: 3;
-  grid-row: 2;
-  width: min(100%, 430px);
+  grid-area: image;
+  width: min(100%, 500px);
   aspect-ratio: 3 / 4;
   justify-self: end;
+  align-self: start;
 }
 
 .about-image-looking img {
