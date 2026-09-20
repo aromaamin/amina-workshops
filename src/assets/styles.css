@@ -1257,7 +1257,7 @@ mask-image: linear-gradient(
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr);
   column-gap: 36px;
-  padding: 96px 0 112px;
+  padding: 76px 0 84px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1332,7 +1332,7 @@ mask-image: linear-gradient(
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr);
   column-gap: 36px;
-  padding: 96px 0 108px;
+  padding: 72px 0 78px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1363,7 +1363,7 @@ mask-image: linear-gradient(
   column-gap: 36px;
   row-gap: 58px;
   align-items: start;
-  padding: 104px 0 116px;
+  padding: 78px 0 86px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1429,7 +1429,7 @@ mask-image: linear-gradient(
   grid-template-columns: 90px minmax(280px, .72fr) minmax(460px, 1.08fr);
   column-gap: 36px;
   align-items: center;
-  padding: 82px 0 92px;
+  padding: 72px 0 78px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -1471,7 +1471,7 @@ mask-image: linear-gradient(
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr);
   column-gap: 36px;
-  padding: 112px 0 128px;
+  padding: 82px 0 94px;
 }
 
 .about-final-heading,
