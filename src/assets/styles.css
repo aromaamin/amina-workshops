@@ -1171,7 +1171,7 @@ mask-image: linear-gradient(
 }
 
 .about-project-hero h1 {
-  max-width: 1120px;
+  max-width: 1320px;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(58px, 6.2vw, 96px);
