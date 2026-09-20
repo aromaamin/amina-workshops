@@ -1251,12 +1251,14 @@ mask-image: linear-gradient(
   margin-left: auto;
   margin-right: auto;
 }
-/* Единая ось для пронумерованных глав */
-.about-chapter-opening,
-.about-chapter-looking,
-.about-creative-bridge {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+/* Единая вертикальная ось номеров 01 / 02 / 03 */
+.about-chapter-opening .about-chapter-number,
+.about-chapter-looking .about-chapter-number,
+.about-creative-bridge .about-chapter-number {
+  position: relative;
+  left: 0;
+  transform: none;
+  justify-self: start;
 }
 
 /* 01 — КУЛЬТУРА */
