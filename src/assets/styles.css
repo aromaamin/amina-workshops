@@ -1369,7 +1369,7 @@ mask-image: linear-gradient(
 
 .about-chapter-looking {
   display: grid;
-  grid-template-columns: 90px minmax(0, .92fr) minmax(360px, .72fr);
+  grid-template-columns: 90px minmax(0, 1.35fr) minmax(320px, .65fr);
   column-gap: 36px;
   row-gap: 58px;
   align-items: start;
