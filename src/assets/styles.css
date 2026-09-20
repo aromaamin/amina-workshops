@@ -1369,9 +1369,9 @@ mask-image: linear-gradient(
 
 .about-chapter-looking {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1.35fr) minmax(320px, .65fr);
+  grid-template-columns: 90px minmax(0, 1.25fr) minmax(300px, .75fr);
   column-gap: 36px;
-  row-gap: 58px;
+  row-gap: 46px;
   align-items: start;
   padding: 78px 0 86px;
   border-bottom: 1px solid var(--line);
@@ -1379,16 +1379,17 @@ mask-image: linear-gradient(
 
 .about-chapter-looking .about-chapter-number {
   grid-column: 1;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 2;
 }
 
 .about-looking-heading {
-  grid-column: 2;
+  grid-column: 2 / 4;
   grid-row: 1;
+  max-width: 1040px;
 }
 
 .about-looking-heading h2 {
-  max-width: 780px;
+  max-width: 1040px;
   margin: 0;
   font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(44px, 4.7vw, 70px);
@@ -1397,22 +1398,10 @@ mask-image: linear-gradient(
   letter-spacing: -.028em;
 }
 
-.about-image-looking {
-  grid-column: 3;
-  grid-row: 1 / span 2;
-  width: min(100%, 520px);
-  aspect-ratio: 3 / 4;
-  justify-self: end;
-}
-
-.about-image-looking img {
-  object-position: center center;
-}
-
 .about-looking-text {
   grid-column: 2;
   grid-row: 2;
-  max-width: 720px;
+  max-width: 700px;
 }
 
 .about-looking-text > p {
@@ -1431,6 +1420,17 @@ mask-image: linear-gradient(
   letter-spacing: -.018em;
 }
 
+.about-image-looking {
+  grid-column: 3;
+  grid-row: 2;
+  width: min(100%, 430px);
+  aspect-ratio: 3 / 4;
+  justify-self: end;
+}
+
+.about-image-looking img {
+  object-position: center center;
+}
 
 /* 03 — СОБСТВЕННЫЙ ОПЫТ */
 
