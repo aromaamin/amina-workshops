@@ -1442,13 +1442,7 @@ mask-image: linear-gradient(
   padding: 72px 0 78px;
   border-bottom: 1px solid var(--line);
 }
-/* Единая вертикальная ось номеров 01 / 02 / 03 */
-.about-chapter-looking,
-.about-creative-bridge {
-  margin-left: 0;
-  margin-right: 0;
-  width: 100%;
-}
+
 .about-creative-bridge .about-chapter-number {
   grid-column: 1;
   grid-row: 1;
