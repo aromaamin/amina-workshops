@@ -1330,28 +1330,31 @@ mask-image: linear-gradient(
 
 .about-project-manifesto {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1fr);
-  column-gap: 36px;
-  padding: 72px 0 78px;
+  grid-template-columns: 90px minmax(0, 1.15fr) minmax(320px, .85fr);
+  column-gap: 42px;
+  align-items: start;
+  padding: 68px 0 72px;
   border-bottom: 1px solid var(--line);
 }
 
 .about-project-manifesto > * {
-  grid-column: 2;
+  grid-column: auto;
 }
 
 .about-project-manifesto .about-project-emphasis {
-  max-width: 880px !important;
-  margin: 0 0 42px !important;
-  font-size: clamp(34px, 3.5vw, 52px) !important;
+  grid-column: 2;
+  max-width: 760px !important;
+  margin: 0 !important;
+  font-size: clamp(34px, 3.3vw, 50px) !important;
   line-height: 1.13 !important;
 }
 
 .about-project-manifesto-text {
-  max-width: 650px;
-  margin: 0;
+  grid-column: 3;
+  max-width: 520px;
+  margin: 7px 0 0;
   font-size: 18px;
-  line-height: 1.72;
+  line-height: 1.68;
 }
 
 
