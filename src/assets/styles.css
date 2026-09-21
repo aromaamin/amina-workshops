@@ -1720,6 +1720,12 @@ mask-image: linear-gradient(
   will-change: opacity, transform;
 }
 
+.about-project-hero .about-reveal,
+.about-chapter-opening .about-reveal {
+  transform: none;
+  transition: opacity 1.8s ease;
+}
+
 .about-reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
