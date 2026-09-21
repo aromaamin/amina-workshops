@@ -193,15 +193,6 @@ permalink: /about/
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-      const introItems = [
-  { selector: '.about-project-hero .eyebrow', delay: 150 },
-  { selector: '.about-project-hero h1', delay: 500 },
-  { selector: '.about-chapter-opening .about-chapter-number', delay: 950 },
-  { selector: '.about-opening-text .about-project-intro', delay: 1150 },
-  { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 1400 },
-  { selector: '.about-image-museum', delay: 1750, image: true }
-];
-
 const revealItems = [
   { selector: '.about-project-manifesto > *', delay: 0 },
   { selector: '.about-looking-heading', delay: 0 },
@@ -215,20 +206,7 @@ const revealItems = [
 ];
 
   const elements = [];
-/* Вступление запускается отдельно от прокрутки */
-introItems.forEach((item) => {
-  document.querySelectorAll(item.selector).forEach((element) => {
-    element.classList.add('about-reveal');
 
-    if (item.image) {
-      element.classList.add('about-reveal-image');
-    }
-
-    setTimeout(() => {
-      element.classList.add('is-visible');
-    }, item.delay);
-  });
-});
   revealItems.forEach((item) => {
     document.querySelectorAll(item.selector).forEach((element) => {
       element.classList.add('about-reveal');
