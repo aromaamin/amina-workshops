@@ -1290,7 +1290,7 @@ mask-image: linear-gradient(
 .about-chapter-number::after {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 27px;
   top: 34px;
   width: 1px;
   height: 155px;
