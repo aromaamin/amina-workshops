@@ -194,17 +194,16 @@ permalink: /about/
 document.addEventListener('DOMContentLoaded', () => {
 
       const revealItems = [
-      /* ВСТУПЛЕНИЕ */
-      { selector: '.about-project-hero .eyebrow', delay: 80 },
-      { selector: '.about-project-hero h1', delay: 240 },
+            /* ВСТУПЛЕНИЕ — медленная последовательность */
+      { selector: '.about-project-hero .eyebrow', delay: 250 },
+      { selector: '.about-project-hero h1', delay: 650 },
 
-      { selector: '.about-chapter-opening .about-chapter-number', delay: 80 },
-      { selector: '.about-opening-text .about-project-intro', delay: 180 },
-      { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 320 },
+      { selector: '.about-chapter-opening .about-chapter-number', delay: 1050 },
+      { selector: '.about-opening-text .about-project-intro', delay: 1200 },
+      { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 1500 },
 
-      /* Первая большая фотография — медленнее и мягче */
-      { selector: '.about-image-museum', delay: 420, image: true },
-
+      /* Первая большая фотография — спокойное проявление */
+      { selector: '.about-image-museum', delay: 1850, image: true },
       /* ДАЛЬШЕ ПО СТРАНИЦЕ */
       { selector: '.about-project-manifesto > *', delay: 0 },
       { selector: '.about-looking-heading', delay: 0 },
