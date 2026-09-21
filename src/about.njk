@@ -192,7 +192,13 @@ permalink: /about/
 </section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  
+
+/* Первый экран: только запуск CSS-анимации после готовности страницы */
+requestAnimationFrame(() => {
+  requestAnimationFrame(() => {
+    document.querySelector('.about-project')?.classList.add('about-page-ready');
+  });
+});
 const revealItems = [
   { selector: '.about-project-manifesto > *', delay: 0 },
   { selector: '.about-looking-heading', delay: 0 },
