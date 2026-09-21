@@ -193,31 +193,42 @@ permalink: /about/
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-      const revealItems = [
-            /* ВСТУПЛЕНИЕ — медленная последовательность */
-      { selector: '.about-project-hero .eyebrow', delay: 250 },
-      { selector: '.about-project-hero h1', delay: 650 },
+      const introItems = [
+  { selector: '.about-project-hero .eyebrow', delay: 150 },
+  { selector: '.about-project-hero h1', delay: 500 },
+  { selector: '.about-chapter-opening .about-chapter-number', delay: 950 },
+  { selector: '.about-opening-text .about-project-intro', delay: 1150 },
+  { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 1400 },
+  { selector: '.about-image-museum', delay: 1750, image: true }
+];
 
-      { selector: '.about-chapter-opening .about-chapter-number', delay: 1050 },
-      { selector: '.about-opening-text .about-project-intro', delay: 1200 },
-      { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 1500 },
-
-      /* Первая большая фотография — спокойное проявление */
-      { selector: '.about-image-museum', delay: 1850, image: true },
-      /* ДАЛЬШЕ ПО СТРАНИЦЕ */
-      { selector: '.about-project-manifesto > *', delay: 0 },
-      { selector: '.about-looking-heading', delay: 0 },
-      { selector: '.about-looking-text', delay: 100 },
-      { selector: '.about-image-looking', delay: 140, image: true },
-      { selector: '.about-creative-bridge .about-chapter-number', delay: 0 },
-      { selector: '.about-image-creative', delay: 100, image: true },
-      { selector: '.about-creative-quote', delay: 180 },
-      { selector: '.about-final-heading', delay: 0 },
-      { selector: '.about-final-text', delay: 120 }
-    ];
+const revealItems = [
+  { selector: '.about-project-manifesto > *', delay: 0 },
+  { selector: '.about-looking-heading', delay: 0 },
+  { selector: '.about-looking-text', delay: 100 },
+  { selector: '.about-image-looking', delay: 140, image: true },
+  { selector: '.about-creative-bridge .about-chapter-number', delay: 0 },
+  { selector: '.about-image-creative', delay: 100, image: true },
+  { selector: '.about-creative-quote', delay: 180 },
+  { selector: '.about-final-heading', delay: 0 },
+  { selector: '.about-final-text', delay: 120 }
+];
 
   const elements = [];
+/* Вступление запускается отдельно от прокрутки */
+introItems.forEach((item) => {
+  document.querySelectorAll(item.selector).forEach((element) => {
+    element.classList.add('about-reveal');
 
+    if (item.image) {
+      element.classList.add('about-reveal-image');
+    }
+
+    setTimeout(() => {
+      element.classList.add('is-visible');
+    }, item.delay);
+  });
+});
   revealItems.forEach((item) => {
     document.querySelectorAll(item.selector).forEach((element) => {
       element.classList.add('about-reveal');
