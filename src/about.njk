@@ -190,3 +190,55 @@ permalink: /about/
   </section>
 
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+
+  const revealItems = [
+    { selector: '.about-project-manifesto > *', delay: 0 },
+    { selector: '.about-looking-heading', delay: 0 },
+    { selector: '.about-looking-text', delay: 100 },
+    { selector: '.about-image-looking', delay: 140, image: true },
+    { selector: '.about-creative-bridge .about-chapter-number', delay: 0 },
+    { selector: '.about-image-creative', delay: 100, image: true },
+    { selector: '.about-creative-quote', delay: 180 },
+    { selector: '.about-final-heading', delay: 0 },
+    { selector: '.about-final-text', delay: 120 }
+  ];
+
+  const elements = [];
+
+  revealItems.forEach((item) => {
+    document.querySelectorAll(item.selector).forEach((element) => {
+      element.classList.add('about-reveal');
+
+      if (item.image) {
+        element.classList.add('about-reveal-image');
+      }
+
+      element.dataset.revealDelay = item.delay;
+      elements.push(element);
+    });
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
+      const element = entry.target;
+      const delay = Number(element.dataset.revealDelay || 0);
+
+      setTimeout(() => {
+        element.classList.add('is-visible');
+      }, delay);
+
+      observer.unobserve(element);
+    });
+  }, {
+    threshold: 0.12,
+    rootMargin: '0px 0px -5% 0px'
+  });
+
+  elements.forEach((element) => observer.observe(element));
+
+});
+</script>
