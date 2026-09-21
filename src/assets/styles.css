@@ -1709,3 +1709,38 @@ mask-image: linear-gradient(
     margin-bottom: 46px;
   }
 }
+/* ABOUT PAGE — SOFT REVEAL */
+
+.about-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1.35s ease,
+    transform 1.35s cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+
+.about-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Фотографии проявляются немного медленнее */
+.about-reveal-image {
+  transition-duration: 1.65s;
+}
+
+/* Небольшая задержка для второстепенных элементов */
+.about-reveal-delay {
+  transition-delay: .16s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-reveal,
+  .about-reveal-image,
+  .about-reveal-delay {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
