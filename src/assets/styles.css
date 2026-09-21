@@ -1740,7 +1740,23 @@ mask-image: linear-gradient(
 .about-reveal-delay {
   transition-delay: .16s;
 }
+/* ABOUT PAGE — INTRO REVEAL */
 
+.about-intro-reveal {
+  opacity: 0;
+  transform: none !important;
+  transition: opacity 1.4s ease;
+  will-change: opacity;
+}
+
+.about-intro-reveal.is-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+.about-intro-image {
+  transition: opacity 1.75s ease;
+}
 @media (prefers-reduced-motion: reduce) {
   .about-reveal,
   .about-reveal-image,
