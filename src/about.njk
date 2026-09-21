@@ -193,20 +193,29 @@ permalink: /about/
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  const revealItems = [
-    { selector: '.about-project-hero > *', delay: 0 },
-    { selector: '.about-opening-text', delay: 0 },
-    { selector: '.about-image-museum', delay: 120, image: true },
-    { selector: '.about-project-manifesto > *', delay: 0 },
-    { selector: '.about-looking-heading', delay: 0 },
-    { selector: '.about-looking-text', delay: 100 },
-    { selector: '.about-image-looking', delay: 140, image: true },
-    { selector: '.about-creative-bridge .about-chapter-number', delay: 0 },
-    { selector: '.about-image-creative', delay: 100, image: true },
-    { selector: '.about-creative-quote', delay: 180 },
-    { selector: '.about-final-heading', delay: 0 },
-    { selector: '.about-final-text', delay: 120 }
-  ];
+      const revealItems = [
+      /* ВСТУПЛЕНИЕ */
+      { selector: '.about-project-hero .eyebrow', delay: 80 },
+      { selector: '.about-project-hero h1', delay: 240 },
+
+      { selector: '.about-chapter-opening .about-chapter-number', delay: 80 },
+      { selector: '.about-opening-text .about-project-intro', delay: 180 },
+      { selector: '.about-opening-text > p:not(.about-project-intro)', delay: 320 },
+
+      /* Первая большая фотография — медленнее и мягче */
+      { selector: '.about-image-museum', delay: 420, image: true },
+
+      /* ДАЛЬШЕ ПО СТРАНИЦЕ */
+      { selector: '.about-project-manifesto > *', delay: 0 },
+      { selector: '.about-looking-heading', delay: 0 },
+      { selector: '.about-looking-text', delay: 100 },
+      { selector: '.about-image-looking', delay: 140, image: true },
+      { selector: '.about-creative-bridge .about-chapter-number', delay: 0 },
+      { selector: '.about-image-creative', delay: 100, image: true },
+      { selector: '.about-creative-quote', delay: 180 },
+      { selector: '.about-final-heading', delay: 0 },
+      { selector: '.about-final-text', delay: 120 }
+    ];
 
   const elements = [];
 
