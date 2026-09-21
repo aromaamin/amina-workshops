@@ -622,7 +622,7 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
 .hero-marker::after {
   content: "";
   position: absolute;
-  left: 10px;
+  left: 27px;
   top: 34px;
   width: 1px;
   height: 155px;
