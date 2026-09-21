@@ -1719,3 +1719,43 @@ mask-image: linear-gradient(
     transition: none;
   }
 }
+/* ABOUT PAGE — OPENING SCENE */
+
+.about-project-hero .eyebrow,
+.about-project-hero h1,
+.about-chapter-opening .about-chapter-number,
+.about-opening-text,
+.about-image-museum {
+  opacity: 0;
+}
+
+/* Все элементы остаются на своих местах — только проявляются */
+.about-project-hero .eyebrow {
+  animation: aboutFadeIn 1.4s ease .12s forwards;
+}
+
+.about-project-hero h1 {
+  animation: aboutFadeIn 1.65s ease .28s forwards;
+}
+
+.about-chapter-opening .about-chapter-number {
+  animation: aboutFadeIn 1.4s ease .52s forwards;
+}
+
+.about-opening-text {
+  animation: aboutFadeIn 1.55s ease .62s forwards;
+}
+
+.about-image-museum {
+  animation: aboutFadeIn 2s ease .82s forwards;
+}
+
+@keyframes aboutFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
