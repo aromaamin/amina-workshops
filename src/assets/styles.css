@@ -1759,3 +1759,23 @@ mask-image: linear-gradient(
     opacity: 1;
   }
 }
+/* ABOUT PAGE — SCROLL REVEAL AFTER OPENING SCENE */
+
+.about-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 1.35s ease,
+    transform 1.35s cubic-bezier(.22, .61, .36, 1);
+  will-change: opacity, transform;
+}
+
+.about-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Фотографии проявляются чуть спокойнее */
+.about-reveal-image {
+  transition-duration: 1.65s;
+}
