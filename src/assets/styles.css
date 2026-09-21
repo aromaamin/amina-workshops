@@ -1223,7 +1223,11 @@ mask-image: linear-gradient(
   letter-spacing: -.015em;
   margin-bottom: 48px !important;
 }
-
+.about-project-intro em {
+  font-family: "Playfair Display", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+}
 .about-project-emphasis {
   max-width: 940px !important;
   margin: 54px 0 !important;
