@@ -192,7 +192,28 @@ permalink: /about/
 </section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+  /* ВСТУПЛЕНИЕ — отдельная режиссура первого экрана */
+  const introItems = [
+    { selector: '.about-project-hero .eyebrow', delay: 120 },
+    { selector: '.about-project-hero h1', delay: 280 },
+    { selector: '.about-chapter-opening .about-chapter-number', delay: 480 },
+    { selector: '.about-opening-text', delay: 520 },
+    { selector: '.about-image-museum', delay: 620, image: true }
+  ];
 
+  introItems.forEach((item) => {
+    document.querySelectorAll(item.selector).forEach((element) => {
+      element.classList.add('about-intro-reveal');
+
+      if (item.image) {
+        element.classList.add('about-intro-image');
+      }
+
+      setTimeout(() => {
+        element.classList.add('is-visible');
+      }, item.delay);
+    });
+  });
 const revealItems = [
   { selector: '.about-project-manifesto > *', delay: 0 },
   { selector: '.about-looking-heading', delay: 0 },
