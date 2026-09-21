@@ -1346,7 +1346,7 @@ mask-image: linear-gradient(
   display: grid;
   grid-template-columns: 90px minmax(0, 1fr);
   column-gap: 36px;
-  padding: 96px 0 108px;
+  padding: 64px 0 108px;
   border-bottom: 1px solid var(--line);
 }
 
