@@ -44,10 +44,10 @@ gallery:
   - /assets/img0182web.jpg
   - /assets/img3927web.jpg
   - /assets/img0985web.jpg
+  - /assets/img1001web.jpg
   - /assets/img1102web.jpg
   - /assets/img1096web.jpg
   - /assets/img3935web.jpg
-  - /assets/img1001web.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20мастер-классе%20«Шелкография».
 order: 3
 ---
