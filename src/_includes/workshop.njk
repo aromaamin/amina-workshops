@@ -19,7 +19,7 @@ layout: base.njk
 {% else %}
   <h1 class="workshop-hero-reveal workshop-hero-reveal-2">{{ title }}</h1>
 {% endif %}
-      <p class="lead workshop-hero-reveal workshop-hero-reveal-3">{{ summary }}</p>
+      <p class="lead workshop-hero-reveal workshop-hero-reveal-3">{{ summary | safe }}</p>
       <div class="facts workshop-hero-reveal workshop-hero-reveal-4">
         {% if duration %}<span>{{ duration }}</span>{% endif %}
         {% if price %}<span>{{ price }}</span>{% endif %}
