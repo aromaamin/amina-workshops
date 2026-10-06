@@ -85,14 +85,18 @@ layout: base.njk
   {% if duration %}<span>{{ duration }}</span><i>•</i>{% endif %}
 
   {% if slug == "silkscreen" %}
-    <span>введение в тему</span>
-    <i>•</i>
-    <span>ручная печать на ткани</span>
-  {% else %}
-    <span>лекция-презентация</span>
-    <i>•</i>
-    <span>живопись на холсте</span>
-  {% endif %}
+  <span>введение в тему</span>
+  <i>•</i>
+  <span>ручная печать на ткани</span>
+{% elif slug == "personal-symbol" %}
+  <span>лекция-презентация</span>
+  <i>•</i>
+  <span>создание авторской работы</span>
+{% else %}
+  <span>лекция-презентация</span>
+  <i>•</i>
+  <span>живопись на холсте</span>
+{% endif %}
 
   <i>•</i>
   <span>профессиональные материалы</span>
