@@ -579,46 +579,7 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
   position: relative;
   z-index: 4;
   }
-/* PERSONAL SYMBOL TITLE */
-.symbol-title {
-  position: relative;
-  max-width: none;
-  width: 100%;
-}
 
-.symbol-title-main {
-  display: block;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: clamp(58px, 5.6vw, 86px);
-  font-weight: 400;
-  line-height: .94;
-  letter-spacing: -.035em;
-}
-
-.symbol-title-totem {
-  display: block;
-  width: fit-content;
-  margin-top: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(58px, 5.8vw, 90px);
-  font-weight: 800;
-  line-height: .88;
-  letter-spacing: .08em;
-}
-
-.totem-o {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: .82em;
-  height: .82em;
-  margin: 0 .06em;
-  border: .055em solid currentColor;
-  border-radius: 50%;
-  font-size: .58em;
-  line-height: 1;
-  vertical-align: .08em;
-}
 /* HOME HERO */
 
 .home-hero {
