@@ -2,16 +2,27 @@
 title: Личный символ / тотем
 slug: personal-symbol
 eyebrow: Авторский мастер-класс
-summary: Работа с образом, знаком и личной символикой — от поиска идеи до собственной художественной интерпретации.
+summary: Работа с образом, знаком и личной символикой — от поиска идеи до
+  собственной художественной интерпретации.
 duration: 3 часа
 price: 45 EUR
 status: Ближайшая дата уточняется
 location: Рига
-cover:
+cover: /assets/img2770web.jpg
+gallery:
+  - /assets/artwork1web.jpg
+  - /assets/artwork5a3web.jpg
+  - /assets/img3382web.jpg
+  - /assets/img3384web.jpg
+  - /assets/img3386web.jpg
+  - /assets/img3406web.jpg
+  - /assets/img3554web.jpg
+  - /assets/img2769web.jpg
+  - /assets/img3465web.jpg
+  - /assets/pexels-shvetsa-5641889web.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20мастер-классе%20«Личный%20символ%20/%20тотем».
 order: 4
 ---
-
 ## О мастер-классе
 
 Этот мастер-класс строится вокруг личного образа и символа.
