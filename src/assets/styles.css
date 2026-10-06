@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Unbounded:wght@600&display=swap');
 :root {
   --bg: #f4f0e9;
   --paper: #fbf9f5;
@@ -579,7 +579,35 @@ h1 { font-size:clamp(56px, 7vw, 104px); max-width:8ch; margin-bottom:28px; }
   position: relative;
   z-index: 4;
   }
+/* PERSONAL SYMBOL TITLE */
+.symbol-title {
+  position: relative;
+  max-width: none;
+  width: 100%;
+}
 
+.symbol-title-main {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(58px, 5.6vw, 86px);
+  font-weight: 400;
+  line-height: .94;
+  letter-spacing: -.035em;
+}
+
+.symbol-title-totem {
+  display: block;
+  margin-top: 10px;
+  font-family: "Unbounded", sans-serif;
+  font-size: clamp(54px, 5.2vw, 80px);
+  font-weight: 600;
+  line-height: .9;
+  letter-spacing: .01em;
+}
+
+.totem-o {
+  font: inherit;
+}
 /* HOME HERO */
 
 .home-hero {
