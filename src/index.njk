@@ -109,6 +109,10 @@ const slider = document.querySelector('.cards');
     let startScrollLeft = 0;
     let hasDragged = false;
 
+    let hoverTarget = slider.scrollLeft;
+    let hoverAnimation = null;
+    let isHovering = false;
+
     slider.addEventListener('dragstart', (e) => {
       e.preventDefault();
     });
