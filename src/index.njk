@@ -155,7 +155,7 @@ const slider = document.querySelector('.cards');
         hasDragged = false;
       }
     }, true);
-    const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    const canHover = !window.matchMedia('(pointer: coarse)').matches;
 
     if (canHover) {
         const animateHoverScroll = () => {
