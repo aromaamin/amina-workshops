@@ -2073,3 +2073,120 @@ mask-image: linear-gradient(
   .home-hero .home-hero-art { width: 100%; max-width: 100%; min-height: 0; height: auto; aspect-ratio: 4 / 3; }
   .home-hero .home-hero-art img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
+
+
+/* MOBILE POLISH — 2026-10-08. Desktop styles remain unchanged. */
+@media (max-width: 760px) {
+  /* Restore the opening sequence disabled by the earlier mobile override. */
+  .home-hero .hero-marker,
+  .home-hero .eyebrow,
+  .home-hero .home-title,
+  .home-hero .lead,
+  .home-hero .button {
+    opacity: 0;
+    animation-name: heroFadeUp;
+    animation-duration: 1.2s;
+    animation-timing-function: cubic-bezier(.22,.61,.36,1);
+    animation-fill-mode: forwards;
+  }
+  .home-hero .hero-marker { animation-delay: .10s; }
+  .home-hero .eyebrow { animation-delay: .28s; }
+  .home-hero .home-title { animation-delay: .48s; }
+  .home-hero .lead { animation-delay: .82s; }
+  .home-hero .button { animation-delay: 1.08s; }
+  .home-hero-art {
+    opacity: 0;
+    animation: heroFadeIn 1.8s ease .22s forwards;
+  }
+
+  /* Mobile-only readable line breaks: avoid breaking words mid-word. */
+  .workshop-page .workshop-hero h1,
+  .workshop-page .special-title,
+  .workshop-page .symbol-title,
+  .workshop-page .special-title-accent,
+  .about-project-hero h1,
+  .about-looking-heading h2,
+  .about-final-heading h2 {
+    overflow-wrap: normal;
+    word-break: normal;
+    hyphens: none;
+  }
+  .workshop-page .workshop-hero h1:not(.special-title):not(.symbol-title) {
+    font-size: clamp(34px, 9vw, 52px);
+    line-height: 1.08;
+  }
+  .workshop-page .workshop-hero .eyebrow {
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: .10em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .workshop-page .workshop-hero .lead {
+    font-size: 16px;
+    line-height: 1.55;
+    overflow-wrap: normal;
+  }
+  .workshop-page .special-title-main,
+  .workshop-page .symbol-title-main { font-size: clamp(34px, 9vw, 52px); }
+  .workshop-page .special-title-accent { font-size: clamp(28px, 7.4vw, 42px); }
+  .workshop-page .symbol-title-totem { font-size: clamp(38px, 10vw, 58px); }
+
+  /* Replace scattered inline dots with a calm, vertically aligned list. */
+  .workshop-page .workshop-includes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 24px 0;
+    white-space: normal;
+  }
+  .workshop-page .workshop-includes i { display: none; }
+  .workshop-page .workshop-includes span {
+    display: block;
+    position: relative;
+    padding-left: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    overflow-wrap: normal;
+  }
+  .workshop-page .workshop-includes span::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--muted);
+    font-weight: 700;
+  }
+
+  /* Ensure the opening 01 scene actually animates on phones. */
+  .about-chapter-opening .about-chapter-number {
+    opacity: 0;
+    animation: aboutFadeIn 1.4s ease .52s forwards;
+  }
+  .about-chapter-opening .about-opening-text {
+    opacity: 0;
+    animation: aboutFadeIn 1.55s ease .62s forwards;
+  }
+  .about-chapter-opening .about-image-museum {
+    opacity: 0;
+    animation: aboutFadeIn 2s ease .82s forwards;
+  }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .home-hero .hero-marker,
+  .home-hero .eyebrow,
+  .home-hero .home-title,
+  .home-hero .lead,
+  .home-hero .button,
+  .home-hero-art,
+  .about-chapter-opening .about-chapter-number,
+  .about-chapter-opening .about-opening-text,
+  .about-chapter-opening .about-image-museum {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
