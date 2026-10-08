@@ -2269,3 +2269,60 @@ mask-image: linear-gradient(
     line-height: 1.1;
   }
 }
+
+/* ABOUT MOBILE — consistent editorial scale and homepage-style markers (v4)
+   All changes are phone-only. Existing animation declarations are untouched. */
+@media screen and (max-width: 760px) {
+  /* Allow natural wrapping instead of the desktop's hard line breaks. */
+  .about-project .about-project-hero h1 {
+    font-size: clamp(32px, 8.2vw, 40px);
+    line-height: 1.13;
+    letter-spacing: -.025em;
+    max-width: 100%;
+    overflow-wrap: normal;
+  }
+  .about-project .about-project-hero h1 br { display: none; }
+
+  /* A single number + short vertical stroke, like the homepage. */
+  .about-project .about-chapter-opening .about-chapter-number,
+  .about-project .about-chapter-looking .about-chapter-number,
+  .about-project .about-creative-bridge .about-chapter-number {
+    position: relative;
+    display: block;
+    width: max-content;
+    grid-column: auto;
+    grid-row: auto;
+    grid-area: auto;
+    left: auto;
+    margin: 0 0 52px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1;
+    transform: none;
+  }
+  .about-project .about-chapter-opening .about-chapter-number::after,
+  .about-project .about-chapter-looking .about-chapter-number::after,
+  .about-project .about-creative-bridge .about-chapter-number::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 8px);
+    width: 1px;
+    height: 23px;
+    transform: translateX(-50%);
+    background: rgba(43, 41, 38, .18);
+  }
+
+  /* Same typographic rank for the main statement of every numbered chapter. */
+  .about-project .about-opening-text .about-project-intro,
+  .about-project .about-looking-heading h2,
+  .about-project .about-creative-quote {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(26px, 6.6vw, 32px) !important;
+    line-height: 1.2 !important;
+    font-weight: 400;
+    letter-spacing: -.018em;
+    max-width: 100%;
+  }
+  .about-project .about-creative-quote br { display: none; }
+}
