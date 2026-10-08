@@ -151,38 +151,7 @@ const slider = document.querySelector('.cards');
         hasDragged = false;
       }
     }, true);
-        let hoverDirection = 0;
-    let hoverFrame = null;
-
-    const hoverScroll = () => {
-        if (hoverDirection !== 0 && !isDown) {
-            slider.scrollLeft += hoverDirection * 2.2;
-        }
-
-        hoverFrame = requestAnimationFrame(hoverScroll);
-    };
-
-   slider.addEventListener('mousemove', (e) => {
-  if (isDown) return;
-
-  const rect = slider.getBoundingClientRect();
-  const x = (e.clientX - rect.left) / rect.width;
-
-  if (x > 0.6) {
-    hoverDirection = 1;
-  } else if (x < 0.4) {
-    hoverDirection = -1;
-  } else {
-    hoverDirection = 0;
-  }
-
-  if (!hoverFrame) {
-    hoverScroll();
-  }
-});
-    slider.addEventListener('mouseleave', () => {
-        hoverDirection = 0;
-    });
+        
   }
 </script>
 <script>
