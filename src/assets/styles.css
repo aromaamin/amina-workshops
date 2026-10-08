@@ -532,7 +532,6 @@ main {
   }
 }
 
-}
 .eyebrow {
   font-size: 13px;
   letter-spacing: .16em;
@@ -1941,4 +1940,88 @@ mask-image: linear-gradient(
   .card-body { padding: 22px; }
   .card h3 { font-size: clamp(27px, 7.4vw, 34px); overflow-wrap: break-word; }
   .card-body > p:not(.meta):not(.status) { font-size: 15px; line-height: 1.55; }
+}
+
+/* WORKSHOP PAGES — MOBILE LAYOUT ONLY */
+@media (max-width: 760px) {
+  .workshop-page { width: 100%; min-width: 0; }
+  .workshop-page .workshop-back-wrap,
+  .workshop-page .workshop-hero,
+  .workshop-page .workshop-about,
+  .workshop-page .workshop-detail,
+  .workshop-page .workshop-includes,
+  .workshop-page .workshop-gallery {
+    width: calc(100% - 40px);
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .workshop-page .workshop-hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding: 36px 0 48px;
+  }
+  .workshop-page .workshop-hero > div:first-child {
+    min-width: 0;
+    padding: 0;
+  }
+  .workshop-page .workshop-hero h1,
+  .workshop-page .special-title,
+  .workshop-page .symbol-title {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+  .workshop-page .workshop-hero h1:not(.special-title):not(.symbol-title) {
+    font-size: clamp(39px, 10vw, 58px);
+    line-height: 1.04;
+  }
+  .workshop-page .special-title-main,
+  .workshop-page .symbol-title-main { font-size: clamp(38px, 10vw, 58px); }
+  .workshop-page .special-title-accent {
+    font-size: clamp(29px, 8vw, 46px);
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .workshop-page .symbol-title-totem {
+    margin-left: 0;
+    font-size: clamp(40px, 11vw, 62px);
+  }
+  .workshop-page .workshop-hero .lead { font-size: 17px; max-width: 100%; }
+  .workshop-page .workshop-hero .button { max-width: 100%; text-align: center; }
+  .workshop-page .workshop-hero .hero-art {
+    width: 100%;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+  .workshop-page .workshop-hero .hero-art::before { display: none; }
+  .workshop-page .workshop-about { padding: 52px 0 0; }
+  .workshop-page .workshop-detail { padding: 40px 0 0; }
+  .workshop-page .workshop-about-layout,
+  .workshop-page .workshop-detail-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .workshop-page .workshop-about-main,
+  .workshop-page .workshop-about-text,
+  .workshop-page .workshop-detail-text { min-width: 0; max-width: 100%; }
+  .workshop-page .workshop-about-text,
+  .workshop-page .workshop-detail-text { font-size: 16px; line-height: 1.65; }
+  .workshop-page .workshop-includes {
+    margin-top: 52px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px 9px;
+    white-space: normal;
+  }
+  .workshop-page .workshop-includes span { font-size: 13px; }
+  .workshop-page .workshop-gallery { padding: 58px 0 70px; }
+  .workshop-page .workshop-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
 }
