@@ -47,14 +47,12 @@ permalink: /about/
         alt="Посетители в пространстве художественного музея"
       >
     </figure>
-    </figure>
 
 </section>
 
 <!-- ФОРМУЛА ПРОЕКТА -->
 
 <section class="about-project-manifesto">
-  <section class="about-project-manifesto">
 
     <p class="about-project-emphasis">
       Из этой мысли и родился проект - желание сделать культуру ближе
@@ -192,6 +190,20 @@ permalink: /about/
 </section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Mobile: start chapter 01 when it enters the viewport, not on page load.
+  const opening = document.querySelector('.about-chapter-opening');
+  if (opening && window.matchMedia('(max-width: 760px)').matches) {
+    const openingObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opening-in-view');
+          openingObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    openingObserver.observe(opening);
+  }
 
   const revealItems = [
     { selector: '.about-project-manifesto > *', delay: 0 },
