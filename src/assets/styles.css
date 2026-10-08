@@ -2190,3 +2190,33 @@ mask-image: linear-gradient(
     transform: none;
   }
 }
+
+/* MOBILE ANIMATION REPAIR — opening image and About chapter 01 */
+@media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
+  /* Specificity matches the older animation:none rule. */
+  .home-hero .home-hero-art {
+    opacity: 0;
+    animation: heroImageRise 1.65s cubic-bezier(.22,.61,.36,1) .25s both;
+  }
+  @keyframes heroImageRise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* The first About chapter is revealed only when scrolled into view. */
+  .about-chapter-opening .about-chapter-number,
+  .about-chapter-opening .about-opening-text,
+  .about-chapter-opening .about-image-museum {
+    opacity: 0;
+    animation: none;
+  }
+  .about-chapter-opening.opening-in-view .about-chapter-number {
+    animation: aboutFadeIn 1.2s ease .08s both;
+  }
+  .about-chapter-opening.opening-in-view .about-opening-text {
+    animation: aboutFadeIn 1.45s ease .2s both;
+  }
+  .about-chapter-opening.opening-in-view .about-image-museum {
+    animation: aboutFadeIn 1.65s ease .38s both;
+  }
+}
