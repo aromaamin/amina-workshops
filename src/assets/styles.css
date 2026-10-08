@@ -2326,3 +2326,14 @@ mask-image: linear-gradient(
   }
   .about-project .about-creative-quote br { display: none; }
 }
+
+/* v5: carefully controlled mobile-only introductory text wraps. */
+.home-lead-mobile, .workshop-summary-mobile { display: none; }
+@media (max-width: 760px) {
+  .home-hero .lead .home-lead-desktop,
+  .workshop-page .workshop-hero .lead .workshop-summary-desktop { display: none; }
+  .home-hero .lead .home-lead-mobile,
+  .workshop-page .workshop-hero .lead .workshop-summary-mobile { display: inline; }
+  .home-hero .lead .home-lead-mobile br,
+  .workshop-page .workshop-hero .lead .workshop-summary-mobile br { display: block; }
+}
