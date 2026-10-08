@@ -2223,3 +2223,49 @@ mask-image: linear-gradient(
     transition: none;
   }
 }
+
+/* ABOUT PAGE — mobile editorial hierarchy and chapter markers (v3).
+   Scoped to phones; keeps all existing scroll animations unchanged. */
+@media (max-width: 760px) {
+  .about-project-hero h1 {
+    font-size: clamp(35px, 9.5vw, 45px);
+    line-height: 1.075;
+    letter-spacing: -.03em;
+  }
+
+  /* A compact number/short rule above content, never behind the letters. */
+  .about-chapter-opening .about-chapter-number,
+  .about-chapter-looking .about-chapter-number,
+  .about-creative-bridge .about-chapter-number {
+    display: block;
+    position: relative;
+    width: max-content;
+    margin: 0 0 48px;
+    padding: 0;
+    font-size: 30px;
+    line-height: 1.1;
+  }
+  .about-chapter-opening .about-chapter-number::after,
+  .about-chapter-looking .about-chapter-number::after,
+  .about-creative-bridge .about-chapter-number::after {
+    left: 50%;
+    top: calc(100% + 7px);
+    width: 1px;
+    height: 24px;
+    transform: translateX(-50%);
+  }
+
+  .about-opening-text .about-project-intro {
+    font-size: clamp(25px, 6.8vw, 29px) !important;
+    line-height: 1.24 !important;
+  }
+  .about-looking-heading h2 {
+    font-size: clamp(32px, 8.4vw, 39px);
+    line-height: 1.1;
+    letter-spacing: -.025em;
+  }
+  .about-final-heading h2 {
+    font-size: clamp(32px, 8.4vw, 39px);
+    line-height: 1.1;
+  }
+}
