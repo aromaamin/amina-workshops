@@ -162,25 +162,24 @@ const slider = document.querySelector('.cards');
         hoverFrame = requestAnimationFrame(hoverScroll);
     };
 
-    slider.addEventListener('mousemove', (e) => {
-        if (isDown) return;
+   slider.addEventListener('mousemove', (e) => {
+  if (isDown) return;
 
-        const rect = slider.getBoundingClientRect();
-        const x = (e.clientX - rect.left) / rect.width;
+  const rect = slider.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width;
 
-        if (x > 0.68) {
-            hoverDirection = 1;
-        } else if (x < 0.32) {
-            hoverDirection = -1;
-        } else {
-            hoverDirection = 0;
-        }
+  if (x > 0.6) {
+    hoverDirection = 1;
+  } else if (x < 0.4) {
+    hoverDirection = -1;
+  } else {
+    hoverDirection = 0;
+  }
 
-        if (!hoverFrame) {
-            hoverScroll();
-        }
-    });
-
+  if (!hoverFrame) {
+    hoverScroll();
+  }
+});
     slider.addEventListener('mouseleave', () => {
         hoverDirection = 0;
     });
