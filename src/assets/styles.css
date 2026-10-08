@@ -1075,12 +1075,12 @@ transition:
 
   padding: 0 180px 12px 0;
 
-  scroll-snap-type: x proximity;
+  scroll-snap-type: none;
   scrollbar-width: none;
   cursor: grab;
 user-select: none;
 -webkit-user-select: none;
-scroll-behavior: smooth;
+scroll-behavior: auto;
   -webkit-mask-image: linear-gradient(
   to right,
   #000 0%,
