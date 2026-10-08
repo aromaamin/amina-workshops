@@ -2160,19 +2160,6 @@ mask-image: linear-gradient(
     font-weight: 700;
   }
 
-  /* Ensure the opening 01 scene actually animates on phones. */
-  .about-chapter-opening .about-chapter-number {
-    opacity: 0;
-    animation: aboutFadeIn 1.4s ease .52s forwards;
-  }
-  .about-chapter-opening .about-opening-text {
-    opacity: 0;
-    animation: aboutFadeIn 1.55s ease .62s forwards;
-  }
-  .about-chapter-opening .about-image-museum {
-    opacity: 0;
-    animation: aboutFadeIn 2s ease .82s forwards;
-  }
 }
 
 @media (max-width: 760px) and (prefers-reduced-motion: reduce) {
@@ -2191,32 +2178,48 @@ mask-image: linear-gradient(
   }
 }
 
-/* MOBILE ANIMATION REPAIR — opening image and About chapter 01 */
+/* MOBILE MOTION — unified, non-conflicting overrides */
 @media (max-width: 760px) and (prefers-reduced-motion: no-preference) {
-  /* Specificity matches the older animation:none rule. */
+  /* First-screen photograph: gentle upward reveal. */
   .home-hero .home-hero-art {
     opacity: 0;
+    visibility: visible;
     animation: heroImageRise 1.65s cubic-bezier(.22,.61,.36,1) .25s both;
   }
-  @keyframes heroImageRise {
-    from { opacity: 0; transform: translateY(18px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
 
-  /* The first About chapter is revealed only when scrolled into view. */
+  /* Chapter 01: each element starts only when that element is visible. */
   .about-chapter-opening .about-chapter-number,
   .about-chapter-opening .about-opening-text,
   .about-chapter-opening .about-image-museum {
-    opacity: 0;
+    opacity: 1;
     animation: none;
+    transform: none;
   }
-  .about-chapter-opening.opening-in-view .about-chapter-number {
-    animation: aboutFadeIn 1.2s ease .08s both;
+  .about-chapter-opening .about-chapter-number.mobile-reveal-pending,
+  .about-chapter-opening .about-opening-text.mobile-reveal-pending,
+  .about-chapter-opening .about-image-museum.mobile-reveal-pending {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 1.15s ease, transform 1.15s cubic-bezier(.22,.61,.36,1);
   }
-  .about-chapter-opening.opening-in-view .about-opening-text {
-    animation: aboutFadeIn 1.45s ease .2s both;
+  .about-chapter-opening .mobile-reveal-pending.mobile-reveal-visible {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .about-chapter-opening.opening-in-view .about-image-museum {
-    animation: aboutFadeIn 1.65s ease .38s both;
+}
+@keyframes heroImageRise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 760px) and (prefers-reduced-motion: reduce) {
+  .home-hero .home-hero-art,
+  .about-chapter-opening .about-chapter-number,
+  .about-chapter-opening .about-opening-text,
+  .about-chapter-opening .about-image-museum {
+    opacity: 1;
+    animation: none;
+    transform: none;
+    transition: none;
   }
 }
