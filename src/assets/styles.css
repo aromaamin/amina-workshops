@@ -2407,6 +2407,6 @@ mask-image: linear-gradient(
 }
 @media (min-width: 769px) {
   .brand-subtitle {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.11em;
   }
 }
