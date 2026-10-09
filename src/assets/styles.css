@@ -2411,42 +2411,32 @@ mask-image: linear-gradient(
   }
 }
 
-/* SECTION 04 — INDIVIDUAL FORMAT
-   Uses the same number/content alignment as section 03. */
+/* SECTION 04 — INDIVIDUAL FORMAT. Same grid as section 03. */
 .group-workshop {
   width: min(2000px, calc(100% - 48px));
+  max-width: none;
   margin: 0 auto;
   padding: 48px 0 110px;
-  display: grid;
+}
+
+.group-workshop .catalogue-heading-layout {
   grid-template-columns: 90px minmax(0, 1fr);
-  column-gap: 36px;
-  align-items: start;
-  background-image: linear-gradient(rgba(43,41,38,.18), rgba(43,41,38,.18));
-  background-repeat: no-repeat;
-  background-size: 1px 150px;
-  background-position: 28px 96px;
+  gap: 36px;
 }
 
-.group-workshop::before {
-  content: "04";
-  grid-column: 1;
-  grid-row: 1;
-  position: relative;
-  padding-top: 8px;
-  font-family: "Playfair Display", Georgia, serif;
+.group-workshop .catalogue-marker {
   font-size: 34px;
-  line-height: 1;
-  color: #8b8174;
+  padding-top: 8px;
 }
 
-.group-workshop-inner {
-  grid-column: 2;
-  grid-row: 1;
-  min-width: 0;
-  max-width: none;
-  margin: 0;
-  padding: 0;
-  border: 0;
+.group-workshop .catalogue-marker::after {
+  left: 28px;
+  top: 48px;
+  height: 150px;
+}
+
+.group-workshop .section-heading {
+  max-width: 900px;
 }
 
 .group-workshop .eyebrow {
@@ -2465,62 +2455,70 @@ mask-image: linear-gradient(
   line-height: 1.02;
 }
 
-.group-workshop-inner > p:not(.eyebrow) {
+.group-workshop-content p {
   max-width: 720px;
   margin: 0 0 22px;
   font-size: 18px;
   line-height: 1.55;
 }
 
-.group-workshop .text-link {
+.group-workshop-button {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 4px;
-  padding: 0 0 4px;
-  border: 0;
+  gap: 9px;
+  padding-bottom: 4px;
   border-bottom: 1px solid rgba(23, 23, 23, .65);
-  border-radius: 0;
-  background: transparent;
   color: var(--text);
   font-size: 17px;
   font-weight: 500;
   line-height: 1.5;
   text-decoration: none;
-  cursor: pointer;
   transition: gap .3s ease, border-color .3s ease;
 }
 
-.group-workshop .text-link:hover,
-.group-workshop .text-link:focus-visible {
-  gap: 13px;
+.group-workshop-button:hover,
+.group-workshop-button:focus-visible {
+  gap: 14px;
   border-bottom-color: currentColor;
 }
 
 @media (max-width: 768px) {
   .group-workshop {
     width: calc(100% - 40px);
-    grid-template-columns: 1fr;
     padding: 48px 0 72px;
-    background-position: 28px 94px;
   }
 
-  .group-workshop::before {
-    grid-column: 1;
-    grid-row: 1;
+  .group-workshop .catalogue-heading-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .group-workshop .catalogue-marker {
+    font-size: 28px;
     padding-top: 0;
-    margin-bottom: 32px;
   }
 
-  .group-workshop-inner {
-    grid-column: 1;
-    grid-row: 2;
+  .group-workshop .catalogue-marker::after {
+    left: 22px;
+    top: 32px;
+    height: 24px;
   }
 
-  .group-workshop h2 { font-size: 34px; }
-  .group-workshop-inner > p:not(.eyebrow) {
+  .group-workshop .eyebrow {
+    font-size: 11px;
+    letter-spacing: .12em;
+  }
+
+  .group-workshop h2 {
+    font-size: clamp(42px, 11vw, 58px);
+    line-height: 1.06;
+    margin-bottom: 30px;
+  }
+
+  .group-workshop-content p {
     font-size: 16px;
     line-height: 1.65;
   }
-  .group-workshop .text-link { font-size: 16px; }
+
+  .group-workshop-button { font-size: 16px; }
 }
