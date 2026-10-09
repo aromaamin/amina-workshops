@@ -2411,119 +2411,116 @@ mask-image: linear-gradient(
   }
 }
 
-/* Group workshops — desktop and mobile */
+/* SECTION 04 — INDIVIDUAL FORMAT
+   Uses the same number/content alignment as section 03. */
 .group-workshop {
-  width: 100%;
-  padding: 72px 24px 88px;
+  width: min(2000px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 48px 0 110px;
+  display: grid;
+  grid-template-columns: 90px minmax(0, 1fr);
+  column-gap: 36px;
+  align-items: start;
+  background-image: linear-gradient(rgba(43,41,38,.18), rgba(43,41,38,.18));
+  background-repeat: no-repeat;
+  background-size: 1px 150px;
+  background-position: 28px 96px;
+}
+
+.group-workshop::before {
+  content: "04";
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  padding-top: 8px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 34px;
+  line-height: 1;
+  color: #8b8174;
 }
 
 .group-workshop-inner {
-  max-width: 1140px;
-  margin: 0 auto;
-  padding-top: 36px;
-  border-top: 1px solid rgba(41, 39, 35, 0.2);
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .group-workshop .eyebrow {
-  margin: 0 0 20px;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  margin: 0 0 24px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .18em;
   text-transform: uppercase;
 }
 
 .group-workshop h2 {
   margin: 0 0 24px;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(32px, 4vw, 54px);
+  font-size: clamp(42px, 5vw, 72px);
   font-weight: 400;
-  line-height: 1.15;
-}
-
-.group-workshop-inner > p:not(.eyebrow) {
-  max-width: 680px;
-  margin: 0 0 24px;
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.group-workshop .text-link {
-  display: inline-block;
-  font-size: 14px;
-}
-
-@media (max-width: 768px) {
-  .group-workshop {
-    padding: 48px 20px 64px;
-  }
-
-  .group-workshop-inner {
-    padding-top: 28px;
-  }
-
-  .group-workshop h2 {
-    font-size: 34px;
-  }
-
-  .group-workshop-inner > p:not(.eyebrow) {
-    font-size: 15px;
-    line-height: 1.65;
-  }
-}
-
-/* Раздел 04 — выравнивание, текст и кнопка */
-@media (min-width: 769px) {
-  .group-workshop {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 72px 0 88px;
-  }
-
-  .group-workshop-inner {
-    max-width: none;
-    margin: 0;
-    padding: 0 0 0 84px;
-    border-top: 0;
-  }
+  line-height: 1.02;
 }
 
 .group-workshop-inner > p:not(.eyebrow) {
   max-width: 720px;
+  margin: 0 0 22px;
   font-size: 18px;
-  line-height: 1.7;
+  line-height: 1.55;
 }
 
 .group-workshop .text-link {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 36px;
-  margin-top: 8px;
-  padding: 16px 24px;
-  background: #f9f7f3;
-  border: 1px solid #d8d2c8;
-  border-radius: 10px;
-  color: #292723;
-  font-size: 14px;
-  font-weight: 600;
+  gap: 8px;
+  margin-top: 4px;
+  padding: 0 0 4px;
+  border: 0;
+  border-bottom: 1px solid rgba(23, 23, 23, .65);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
   text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  transition: gap .3s ease, border-color .3s ease;
 }
 
-.group-workshop .text-link:hover {
-  background: #eae5dc;
-  border-color: #a79f93;
+.group-workshop .text-link:hover,
+.group-workshop .text-link:focus-visible {
+  gap: 13px;
+  border-bottom-color: currentColor;
 }
 
 @media (max-width: 768px) {
+  .group-workshop {
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr;
+    padding: 48px 0 72px;
+    background-position: 28px 94px;
+  }
+
+  .group-workshop::before {
+    grid-column: 1;
+    grid-row: 1;
+    padding-top: 0;
+    margin-bottom: 32px;
+  }
+
+  .group-workshop-inner {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .group-workshop h2 { font-size: 34px; }
   .group-workshop-inner > p:not(.eyebrow) {
     font-size: 16px;
     line-height: 1.65;
   }
-
-  .group-workshop .text-link {
-    max-width: 100%;
-    gap: 20px;
-    padding: 15px 20px;
-  }
+  .group-workshop .text-link { font-size: 16px; }
 }
