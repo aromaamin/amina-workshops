@@ -2337,3 +2337,55 @@ mask-image: linear-gradient(
   .home-hero .lead .home-lead-mobile br,
   .workshop-page .workshop-hero .lead .workshop-summary-mobile br { display: block; }
 }
+
+
+/* v6 — phone-only workshop carousel: visible next card and prominent navigation. */
+.catalogue-mobile-controls { display: none; }
+@media screen and (max-width: 760px) {
+  .catalogue .section-heading h2 { margin-bottom: 14px; }
+  .catalogue-mobile-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin: 0 0 16px;
+  }
+  .catalogue-arrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 46px;
+    padding: 0;
+    border: 1px solid #292723;
+    border-radius: 0;
+    background: #292723;
+    color: #fff;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .catalogue-arrow svg {
+    width: 27px;
+    height: 27px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .catalogue-arrow:disabled {
+    background: transparent;
+    color: #a7a098;
+    border-color: #d2cbc1;
+    cursor: default;
+  }
+  .catalogue .cards {
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 0;
+    padding-right: 0;
+  }
+  .catalogue .cards > .card {
+    flex: 0 0 calc(100% - 56px);
+    max-width: 350px;
+    scroll-snap-align: start;
+  }
+}
