@@ -6,7 +6,7 @@ summary: Один вечер, чтобы увидеть, как живопись
   попробовать собственный язык цвета, жеста и формы.
 duration: 3 часа
 price: 45 EUR
-status: Ближайшая дата уточняется
+status: 11 октября 2026 | 16:00
 location: Riga, Dzirnavu iela 53
 cover: /assets/pexels-roman-odintsov-8189120new-1.jpg
 program: >-
