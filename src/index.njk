@@ -161,7 +161,74 @@ const slider = document.querySelector('.cards');
       }
     }, true);
 
+    // Desktop: smooth carousel movement on mouse hover.
+    if (window.matchMedia('(min-width: 769px) and (hover: hover) and (pointer: fine)').matches) {
+      let hoverActive = false;
+      let animationFrame = null;
+      let pointerPosition = 0.5;
+      let currentSpeed = 0;
 
+      function animateHoverScroll() {
+        if (!hoverActive || isDown) {
+          currentSpeed = 0;
+          animationFrame = null;
+          return;
+        }
+
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+        if (maxScroll <= 0) {
+          animationFrame = null;
+          return;
+        }
+
+        const distanceFromCenter = (pointerPosition - 0.5) * 2;
+        const desiredSpeed =
+          Math.abs(distanceFromCenter) < 0.18
+            ? 0
+            : Math.sign(distanceFromCenter) *
+              Math.pow(Math.abs(distanceFromCenter), 1.5) * 5;
+
+        currentSpeed += (desiredSpeed - currentSpeed) * 0.08;
+
+        if (Math.abs(currentSpeed) > 0.01) {
+          slider.scrollLeft += currentSpeed;
+        }
+
+        animationFrame = requestAnimationFrame(animateHoverScroll);
+      }
+
+      slider.addEventListener('mouseenter', () => {
+        hoverActive = true;
+
+        if (animationFrame === null) {
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        const rect = slider.getBoundingClientRect();
+        pointerPosition = Math.max(
+          0,
+          Math.min(1, (e.clientX - rect.left) / rect.width)
+        );
+
+        if (!isDown && animationFrame === null) {
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        hoverActive = false;
+        currentSpeed = 0;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (hoverActive && animationFrame === null) 
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+    }
     // Mobile-only accessible carousel controls; desktop dragging remains unchanged.
     const previousButton = document.querySelector('.catalogue-arrow-prev');
     const nextButton = document.querySelector('.catalogue-arrow-next');
