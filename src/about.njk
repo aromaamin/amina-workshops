@@ -47,14 +47,12 @@ permalink: /about/
         alt="Посетители в пространстве художественного музея"
       >
     </figure>
-    </figure>
 
 </section>
 
 <!-- ФОРМУЛА ПРОЕКТА -->
 
 <section class="about-project-manifesto">
-  <section class="about-project-manifesto">
 
     <p class="about-project-emphasis">
       Из этой мысли и родился проект - желание сделать культуру ближе
@@ -192,6 +190,26 @@ permalink: /about/
 </section>
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+
+  // Mobile: observe the individual chapter 01 elements, not the whole
+  // tall section. A section observer fires too early, before the image is seen.
+  const mobileMotion = window.matchMedia('(max-width: 760px) and (prefers-reduced-motion: no-preference)').matches;
+  if (mobileMotion && 'IntersectionObserver' in window) {
+    const openingItems = document.querySelectorAll(
+      '.about-chapter-opening .about-chapter-number, ' +
+      '.about-chapter-opening .about-opening-text, ' +
+      '.about-chapter-opening .about-image-museum'
+    );
+    openingItems.forEach((item) => item.classList.add('mobile-reveal-pending'));
+    const openingObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('mobile-reveal-visible');
+        openingObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+    openingItems.forEach((item) => openingObserver.observe(item));
+  }
 
   const revealItems = [
     { selector: '.about-project-manifesto > *', delay: 0 },

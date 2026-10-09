@@ -24,7 +24,18 @@ layout: base.njk
 {% else %}
   <h1 class="workshop-hero-reveal workshop-hero-reveal-2">{{ title }}</h1>
 {% endif %}
-      <p class="lead workshop-hero-reveal workshop-hero-reveal-3">{{ summary | safe }}</p>
+      <p class="lead workshop-hero-reveal workshop-hero-reveal-3">
+        <span class="workshop-summary-desktop">{{ summary | safe }}</span>
+        {% if slug == "impressionists" %}
+        <span class="workshop-summary-mobile">Погружение в живопись света и цвета.<br>От разговора об импрессионистах до собственной живописной работы на холсте.</span>
+        {% elif slug == "personal-symbol" %}
+        <span class="workshop-summary-mobile">Поиск собственного образа через символы<br>и ассоциации, от личной идеи до её художественного воплощения.</span>
+        {% elif slug == "silkscreen" %}
+        <span class="workshop-summary-mobile">Знакомство с техникой шелкографии.<br>От создания изображения и трафарета до собственного авторского&nbsp;принта на ткани.</span>
+        {% else %}
+        <span class="workshop-summary-mobile">{{ summary | safe }}</span>
+        {% endif %}
+      </p>
       <div class="facts workshop-hero-reveal workshop-hero-reveal-4">
         {% if duration %}<span>{{ duration }}</span>{% endif %}
         {% if price %}<span>{{ price }}</span>{% endif %}

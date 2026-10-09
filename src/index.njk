@@ -17,8 +17,8 @@ title: Авторские художественные мастер-классы
       </h1>
 
       <p class="lead">
-        История искусства, внимательный взгляд<br>
-        и собственная творческая практика.
+        <span class="home-lead-desktop">История искусства, внимательный взгляд<br>и собственная творческая практика.</span>
+        <span class="home-lead-mobile">История искусства, внимательный взгляд<br>и собственная творческая практика.</span>
       </p>
 
       <a class="button" href="#workshops" id="workshops-button">
@@ -64,7 +64,16 @@ title: Авторские художественные мастер-классы
   </div>
 </div>
 
-  <div class="cards">
+  <div class="catalogue-mobile-controls" aria-label="Навигация по мастер-классам">
+    <button class="catalogue-arrow catalogue-arrow-prev" type="button" aria-label="Предыдущий мастер-класс" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 12H5m0 0 6-6m-6 6 6 6"/></svg>
+    </button>
+    <button class="catalogue-arrow catalogue-arrow-next" type="button" aria-label="Следующий мастер-класс">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14m0 0-6-6m6 6-6 6"/></svg>
+    </button>
+  </div>
+
+  <div class="cards" aria-label="Мастер-классы — горизонтальная галерея">
   {% for workshop in collections.workshops | sort(false, false, "data.order") %}
     <article class="card">
       <a class="card-image" href="{{ workshop.url }}">
@@ -151,6 +160,108 @@ const slider = document.querySelector('.cards');
         hasDragged = false;
       }
     }, true);
+
+    // Desktop: smooth carousel movement on mouse hover.
+    if (window.matchMedia('(min-width: 769px) and (hover: hover) and (pointer: fine)').matches) {
+      let hoverActive = false;
+      let animationFrame = null;
+      let pointerPosition = 0.5;
+      let currentSpeed = 0;
+
+      function animateHoverScroll() {
+        if (!hoverActive || isDown) {
+          currentSpeed = 0;
+          animationFrame = null;
+          return;
+        }
+
+        const maxScroll = slider.scrollWidth - slider.clientWidth;
+
+        if (maxScroll <= 0) {
+          animationFrame = null;
+          return;
+        }
+
+        const distanceFromCenter = (pointerPosition - 0.5) * 2;
+        const desiredSpeed =
+          Math.abs(distanceFromCenter) < 0.18
+            ? 0
+            : Math.sign(distanceFromCenter) *
+              Math.pow(Math.abs(distanceFromCenter), 1.5) * 5;
+
+        currentSpeed += (desiredSpeed - currentSpeed) * 0.08;
+
+        if (Math.abs(currentSpeed) > 0.01) {
+          slider.scrollLeft += currentSpeed;
+        }
+
+        animationFrame = requestAnimationFrame(animateHoverScroll);
+      }
+
+      slider.addEventListener('mouseenter', () => {
+        hoverActive = true;
+
+        if (animationFrame === null) {
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+
+      slider.addEventListener('mousemove', (e) => {
+        const rect = slider.getBoundingClientRect();
+        pointerPosition = Math.max(
+          0,
+          Math.min(1, (e.clientX - rect.left) / rect.width)
+        );
+
+        if (!isDown && animationFrame === null) {
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+
+      slider.addEventListener('mouseleave', () => {
+        hoverActive = false;
+        currentSpeed = 0;
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (hoverActive && animationFrame === null) {
+          animationFrame = requestAnimationFrame(animateHoverScroll);
+        }
+      });
+    }
+    // Mobile-only accessible carousel controls; desktop dragging remains unchanged.
+    const previousButton = document.querySelector('.catalogue-arrow-prev');
+    const nextButton = document.querySelector('.catalogue-arrow-next');
+    const mobileCarousel = window.matchMedia('(max-width: 760px)');
+    const cards = Array.from(slider.querySelectorAll('.card'));
+
+    function updateCarouselArrows() {
+      if (!previousButton || !nextButton) return;
+      const maxScroll = Math.max(0, slider.scrollWidth - slider.clientWidth);
+      previousButton.disabled = slider.scrollLeft <= 3;
+      nextButton.disabled = slider.scrollLeft >= maxScroll - 3;
+    }
+
+    function moveCarousel(direction) {
+      if (!mobileCarousel.matches || !cards.length) return;
+      const current = slider.scrollLeft;
+      const positions = cards.map(card => card.offsetLeft - cards[0].offsetLeft);
+      let target;
+      if (direction > 0) {
+        target = positions.find(position => position > current + 5);
+        if (target === undefined) target = slider.scrollWidth - slider.clientWidth;
+      } else {
+        target = positions.slice().reverse().find(position => position < current - 5);
+        if (target === undefined) target = 0;
+      }
+      slider.scrollTo({ left: target, behavior: 'smooth' });
+    }
+
+    previousButton?.addEventListener('click', () => moveCarousel(-1));
+    nextButton?.addEventListener('click', () => moveCarousel(1));
+    slider.addEventListener('scroll', updateCarouselArrows, { passive: true });
+    window.addEventListener('resize', updateCarouselArrows);
+    updateCarouselArrows();
         
   }
 </script>
