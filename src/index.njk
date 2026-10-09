@@ -224,7 +224,7 @@ const slider = document.querySelector('.cards');
       });
 
       window.addEventListener('mouseup', () => {
-        if (hoverActive && animationFrame === null) 
+        if (hoverActive && animationFrame === null) {
           animationFrame = requestAnimationFrame(animateHoverScroll);
         }
       });
