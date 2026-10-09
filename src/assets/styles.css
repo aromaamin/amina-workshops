@@ -2470,3 +2470,60 @@ mask-image: linear-gradient(
     line-height: 1.65;
   }
 }
+
+/* Раздел 04 — выравнивание, текст и кнопка */
+@media (min-width: 769px) {
+  .group-workshop {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 72px 0 88px;
+  }
+
+  .group-workshop-inner {
+    max-width: none;
+    margin: 0;
+    padding: 0 0 0 84px;
+    border-top: 0;
+  }
+}
+
+.group-workshop-inner > p:not(.eyebrow) {
+  max-width: 720px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.group-workshop .text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  margin-top: 8px;
+  padding: 16px 24px;
+  background: #f9f7f3;
+  border: 1px solid #d8d2c8;
+  border-radius: 10px;
+  color: #292723;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.group-workshop .text-link:hover {
+  background: #eae5dc;
+  border-color: #a79f93;
+}
+
+@media (max-width: 768px) {
+  .group-workshop-inner > p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .group-workshop .text-link {
+    max-width: 100%;
+    gap: 20px;
+    padding: 15px 20px;
+  }
+}
