@@ -2410,3 +2410,63 @@ mask-image: linear-gradient(
     letter-spacing: 0.11em;
   }
 }
+
+/* Group workshops — desktop and mobile */
+.group-workshop {
+  width: 100%;
+  padding: 72px 24px 88px;
+}
+
+.group-workshop-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-top: 36px;
+  border-top: 1px solid rgba(41, 39, 35, 0.2);
+}
+
+.group-workshop .eyebrow {
+  margin: 0 0 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.group-workshop h2 {
+  margin: 0 0 24px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 4vw, 54px);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.group-workshop-inner > p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0 0 24px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.group-workshop .text-link {
+  display: inline-block;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .group-workshop {
+    padding: 48px 20px 64px;
+  }
+
+  .group-workshop-inner {
+    padding-top: 28px;
+  }
+
+  .group-workshop h2 {
+    font-size: 34px;
+  }
+
+  .group-workshop-inner > p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+}
