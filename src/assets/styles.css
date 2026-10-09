@@ -2405,3 +2405,8 @@ mask-image: linear-gradient(
     scroll-snap-align: start;
   }
 }
+@media (min-width: 769px) {
+  .brand-subtitle {
+    letter-spacing: 0.08em;
+  }
+}
