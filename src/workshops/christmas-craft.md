@@ -9,6 +9,7 @@ duration: 3 часа
 price: 40 eur
 status: Ближайшая дата уточняется
 location: Riga, Dzirnavu iela 53
+cover: /assets/pexels-cottonbro-6072575web.jpg
 program: >-
   Встреча начинается со знакомства с возможностями крафтовой бумаги как
   декоративного материала. Рассматриваем примеры рождественских украшений,
@@ -38,6 +39,17 @@ takeaway: >-
   А вместе с ними - знакомство с основными приёмами бумажной пластики, понимание
   того, как из простых геометрических форм рождается объём, и идеи для
   дальнейшего самостоятельного творчества.
+gallery:
+  - /assets/img1web.jpg
+  - /assets/img3web.jpg
+  - /assets/img4web.jpg
+  - /assets/img6web.jpg
+  - /assets/pexels-cottonbro-6072427web.jpg
+  - /assets/pexels-cottonbro-6072580web.jpg
+  - /assets/img2web.jpg
+  - /assets/pexels-cottonbro-6072428web.jpg
+  - /assets/pexels-cottonbro-6072441web.jpg
+  - /assets/pexels-leeloothefirst-5037267web.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20рождественском%20мастер-классе%20по%20крафтовому%20декору.
 order: 5
 ---
