@@ -98,7 +98,6 @@ layout: base.njk
 </section>
 {% endif %}
 <div class="workshop-includes">
-<span>ПРОВЕРКА SLUG: [{{ slug }}]</span>
   {% if duration %}<span>{{ duration }}</span><i>•</i>{% endif %}
 
   {% if slug == "silkscreen" %}
@@ -109,7 +108,7 @@ layout: base.njk
   <span>лекция-презентация</span>
   <i>•</i>
   <span>создание авторской работы</span>
-{% elif slug == "christmas-сraft" %}
+{% elif title == "Рождественская мастерская" %}
   <span>знакомство с бумажной пластикой</span>
   <i>•</i>
   <span>создание рождественского декора</span>
@@ -120,7 +119,7 @@ layout: base.njk
 {% endif %}
 
   <i>•</i>
-  {% if slug == "christmas-сraft" %}
+  {% if title == "Рождественская мастерская" %}
   <span>материалы для творчества</span>
 {% else %}
   <span>профессиональные материалы</span>
