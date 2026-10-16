@@ -108,6 +108,10 @@ layout: base.njk
   <span>лекция-презентация</span>
   <i>•</i>
   <span>создание авторской работы</span>
+{% elif slug == "christmas-kraft" %}
+  <span>знакомство с бумажной пластикой</span>
+  <i>•</i>
+  <span>создание рождественского декора</span>
 {% else %}
   <span>лекция-презентация</span>
   <i>•</i>
@@ -115,7 +119,11 @@ layout: base.njk
 {% endif %}
 
   <i>•</i>
+  {% if slug == "christmas-kraft" %}
+  <span>материалы для творчества</span>
+{% else %}
   <span>профессиональные материалы</span>
+{% endif %}
   <i>•</i>
   <span>индивидуальное сопровождение</span>
   <i>•</i>
