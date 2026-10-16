@@ -98,36 +98,33 @@ layout: base.njk
 </section>
 {% endif %}
 <div class="workshop-includes">
-  {% if duration %}<span>{{ duration }}</span><i>•</i>{% endif %}
+  {% if slug == "christmas-craft" %}
+    <span>{{ duration }}</span><i>•</i>
+    <span>знакомство с бумажной пластикой</span><i>•</i>
+    <span>создание рождественского декора</span><i>•</i>
+    <span>все материалы включены</span><i>•</i>
+    <span>индивидуальное сопровождение</span><i>•</i>
+    <span>напитки и угощения</span>
+  {% else %}
+    {% if duration %}<span>{{ duration }}</span><i>•</i>{% endif %}
 
-  {% if slug == "silkscreen" %}
-  <span>введение в тему</span>
-  <i>•</i>
-  <span>ручная печать на ткани</span>
-{% elif slug == "personal-symbol" %}
-  <span>лекция-презентация</span>
-  <i>•</i>
-  <span>создание авторской работы</span>
-{% elif title == "Рождественская мастерская" %}
-  <span>знакомство с бумажной пластикой</span>
-  <i>•</i>
-  <span>создание рождественского декора</span>
-{% else %}
-  <span>лекция-презентация</span>
-  <i>•</i>
-  <span>живопись на холсте</span>
-{% endif %}
+    {% if slug == "silkscreen" %}
+      <span>введение в тему</span><i>•</i>
+      <span>ручная печать на ткани</span>
+    {% elif slug == "personal-symbol" %}
+      <span>лекция-презентация</span><i>•</i>
+      <span>создание авторской работы</span>
+    {% else %}
+      <span>лекция-презентация</span><i>•</i>
+      <span>живопись на холсте</span>
+    {% endif %}
 
-  <i>•</i>
-  {% if title == "Рождественская мастерская" %}
-  <span>материалы для творчества</span>
-{% else %}
-  <span>профессиональные материалы</span>
-{% endif %}
-  <i>•</i>
-  <span>индивидуальное сопровождение</span>
-  <i>•</i>
-  <span>напитки и угощения</span>
+    <i>•</i>
+    <span>профессиональные материалы</span><i>•</i>
+    <span>индивидуальное сопровождение</span><i>•</i>
+    <span>напитки и угощения</span>
+  {% endif %}
+</div>
 </div>
 {% if gallery and gallery.length %}
 <section class="workshop-gallery">
