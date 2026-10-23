@@ -6,7 +6,7 @@ summary: Погружение в живопись света и цвета. От
   собственной живописной работы на холсте.
 duration: 3 часа
 price: 45 eur
-status: Ближайшая дата уточняется
+status: 1 ноября | 16:00
 location: Riga, Dzirnavu iela 53
 cover: /assets/impressionist-painting-in-a-cozy-studio.jpg
 program: Сначала небольшое погружение в историю импрессионизма. Мы рассматриваем
