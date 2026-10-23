@@ -9,6 +9,7 @@ duration: 2,5 часа
 price: 45 EUR
 status: Ближайшая дата уточняется
 location: Riga, Dzirnavu iela 53
+cover: /assets/rustic-holiday-reindeer-shirt-flat-layweb.png
 program: >-
   Начинаем встречу с небольшого знакомства с историей шелкографии: узнаём, как
   появилась эта техника, как развивалась и какое место занимает сегодня в
@@ -35,6 +36,15 @@ takeaway: >-
   А вместе с ней, знакомство с историей шелкографии, практический опыт
   трафаретной печати и понимание основных принципов работы с текстильными
   красками.
+gallery:
+  - /assets/img0977web.jpg
+  - /assets/img0982web-1.jpg
+  - /assets/img0985web-1.jpg
+  - /assets/img0978web.jpg
+  - /assets/img1053web-1.jpg
+  - /assets/img0566web.jpg
+  - /assets/img0979web-1.jpg
+  - /assets/rustic-christmas-bell-t-shirt-flat-layweb.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20рождественской%20шелкографии.
 order: 6
 ---
