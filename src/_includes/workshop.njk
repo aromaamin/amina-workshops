@@ -108,16 +108,20 @@ layout: base.njk
   {% else %}
     {% if duration %}<span>{{ duration }}</span><i>•</i>{% endif %}
 
-    {% if slug == "silkscreen" %}
-      <span>введение в тему</span><i>•</i>
-      <span>ручная печать на ткани</span>
-    {% elif slug == "personal-symbol" %}
-      <span>лекция-презентация</span><i>•</i>
-      <span>создание авторской работы</span>
-    {% else %}
-      <span>лекция-презентация</span><i>•</i>
-      <span>живопись на холсте</span>
-    {% endif %}
+   {% if slug == "silkscreen" %}
+  <span>введение в тему</span><i>•</i>
+  <span>ручная печать на ткани</span>
+{% elif slug == "christmas-silkscreen" %}
+  <span>знакомство с шелкографией</span><i>•</i>
+  <span>создание рождественского трафарета</span><i>•</i>
+  <span>ручная печать на футболке</span>
+{% elif slug == "personal-symbol" %}
+  <span>лекция-презентация</span><i>•</i>
+  <span>создание авторской работы</span>
+{% else %}
+  <span>лекция-презентация</span><i>•</i>
+  <span>живопись на холсте</span>
+{% endif %}
 
     <i>•</i>
     <span>профессиональные материалы</span><i>•</i>
