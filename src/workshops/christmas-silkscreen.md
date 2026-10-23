@@ -45,6 +45,7 @@ gallery:
   - /assets/img0566web.jpg
   - /assets/img0979web-1.jpg
   - /assets/rustic-christmas-bell-t-shirt-flat-layweb.jpg
+  - /assets/festive-holly-print-t-shirt-in-cozy-interior.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20рождественской%20шелкографии.
 order: 6
 ---
