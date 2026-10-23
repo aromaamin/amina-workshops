@@ -7,7 +7,7 @@ summary: "Создание рождественского декора из кр
   фактурой и деталями."
 duration: 3 часа
 price: 40 eur
-status: 1 ноября 16:00
+status: Ближашая дата уточняется
 location: Riga, Dzirnavu iela 53
 cover: /assets/pexels-cottonbro-6072575web.jpg
 program: >-
