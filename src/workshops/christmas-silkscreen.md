@@ -7,7 +7,7 @@ summary: Создание авторского рождественского п
   сочетаниями материалов.
 duration: 2,5 часа
 price: 45 EUR
-status: Ближайшая дата уточняется
+status: 13 декабря · 16:00
 location: Riga, Dzirnavu iela 53
 cover: /assets/rustic-holiday-reindeer-shirt-flat-layweb.png
 program: >-
