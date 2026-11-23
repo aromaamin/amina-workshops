@@ -30,6 +30,7 @@ takeaway: >-
   А, главное, радость совместной работы, тёплые воспоминания о времени,
   проведённом вместе и новые творческие впечатления!
 gallery:
+  - /assets/kraftovye-ukrasheniya-k-prazdniku.jpg
   - /assets/img1web.jpg
   - /assets/img3web.jpg
   - /assets/pexels-cottonbro-6072428web.jpg
@@ -39,7 +40,6 @@ gallery:
   - /assets/img6web.jpg
   - /assets/pexels-cottonbro-6072427web.jpg
   - /assets/pexels-cottonbro-6072441web.jpg
-  - /assets/kraftovye-ukrasheniya-k-prazdniku.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20рождественском%20мастер-классе%20по%20крафтовому%20декору.
 order: 5
 ---
