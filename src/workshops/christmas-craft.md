@@ -34,12 +34,12 @@ gallery:
   - /assets/img3web.jpg
   - /assets/pexels-cottonbro-6072428web.jpg
   - /assets/rukodelnaya-masterskaya-zvezda-i-uzory-1-1.jpg
+  - /assets/img1258web.jpg
   - /assets/img4web.jpg
   - /assets/img6web.jpg
   - /assets/pexels-cottonbro-6072427web.jpg
-  - /assets/img2web.jpg
   - /assets/pexels-cottonbro-6072441web.jpg
-  - /assets/pexels-leeloothefirst-5037267web.jpg
+  - /assets/kraftovye-ukrasheniya-k-prazdniku.jpg
 whatsapp: https://wa.me/37129886808?text=Здравствуйте%21%20Хочу%20узнать%20подробнее%20о%20рождественском%20мастер-классе%20по%20крафтовому%20декору.
 order: 5
 ---
