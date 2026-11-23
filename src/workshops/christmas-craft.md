@@ -6,7 +6,7 @@ summary: Семейная рождественская мастерская дл
   объёмные звёзды, декоративные домики и расписные украшени, открывая радость
   совместного творчества.
 duration: 3 часа
-price: 40 eur
+price: от 45 eur
 status: 6 декабря · 16:00
 location: Riga, Dzirnavu iela 53
 cover: /assets/pexels-cottonbro-6072575web.jpg
